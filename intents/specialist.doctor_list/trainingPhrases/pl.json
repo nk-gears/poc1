@@ -1,0 +1,50 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Jakich "
+    }, {
+      "text": "endokrynologów",
+      "parameterId": "doctor-category"
+    }, {
+      "text": " macie w waszej "
+    }, {
+      "text": "przychodni",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "podaj listę lekarzy o specjalności ",
+      "auto": true
+    }, {
+      "text": "Endokrynologia",
+      "parameterId": "doctor-category",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Jacy "
+    }, {
+      "text": "endokrynolodzy",
+      "parameterId": "doctor-category"
+    }, {
+      "text": " przyjmują w waszej przychodni?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Jacy lekarze dostępni dla "
+    }, {
+      "text": "Endokrynologia",
+      "parameterId": "doctor-category"
+    }, {
+      "text": " ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  } ]
+}

@@ -1,0 +1,39 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "poczekaj",
+      "parameterId": "last-name",
+      "auto": true
+    }, {
+      "text": " chwilę proszę",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "proszę poczekać",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Proszę się nie rozłączać"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "proszę zaczekaj minutę"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Poczekaj sekundę"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  } ]
+}

@@ -1,0 +1,15 @@
+{
+  "entities": [ {
+    "value": "Alex",
+    "synonyms": [ "Alex" ],
+    "languageCode": "en"
+  }, {
+    "value": "Arju",
+    "synonyms": [ "Arju" ],
+    "languageCode": "en"
+  }, {
+    "value": "Lalitha",
+    "synonyms": [ "Lalitha" ],
+    "languageCode": "en"
+  } ]
+}

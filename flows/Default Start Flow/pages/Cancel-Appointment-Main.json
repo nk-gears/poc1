@@ -1,0 +1,65 @@
+{
+  "name": "db406f6b-acaf-437f-b5e9-625b5b930b22",
+  "displayName": "Cancel-Appointment-Main",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "booking_cancelled",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.pesel_verified = null OR $session.params.pesel_verified = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "User-Verification",
+    "name": "d995812f-ce10-4570-a6f9-999bc4991d42"
+  }, {
+    "condition": "$session.params.pesel_verified = true AND $session.params.event_meta_last.from_appointments = true",
+    "triggerFulfillment": {
+      "returnPartialResponses": true
+    },
+    "targetPage": "Cancel-Confirm-Outside",
+    "name": "ea4d9df0-e316-49f2-8d3a-f10c0aa272db"
+  }, {
+    "condition": "$session.params.pesel_verified = true AND $session.params.event_meta_last.from_appointments != true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Pozwól proszę, że sprawdzę na kiedy masz zaplanowane wizyty w naszej przychodni" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Sure, Let me check your upcoming appointments" ]
+        },
+        "languageCode": "en"
+      } ],
+      "webhook": "Gabinet Webhook",
+      "tag": "my-appointments",
+      "returnPartialResponses": true
+    },
+    "targetPage": "Cancel-Confirm",
+    "name": "371ee041-b31b-4fe3-930a-a2b5819ac58c"
+  }, {
+    "condition": "$session.params.pesel_verified = true AND $session.params.has_appointments = false AND $session.params.event_meta_last.from_appointments != true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nie widzę żadnych zaplanowanych wizyt dla ciebie" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "We couldn't find any appointments to cancel" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything-Else",
+    "name": "b26e827c-2695-465b-a28a-aff09e351cf8"
+  } ]
+}

@@ -1,0 +1,6 @@
+{
+  "promptTexts": [ {
+    "text": "I need an appointment with $doctorName on next $bookDate in the evening",
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,70 @@
+{
+  "name": "b3cf9533-ba26-464a-966a-e5f688f3b89e",
+  "displayName": "Reg-Init",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "We need your basic profile information to book an appointment with the doctor.  " ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "The information collected will be kept safe and we respect your Privacy as per the rules of EC. Do you want to continue ?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Do umówienia wizyty ptrzebujemy twoje Imię, Nazwisko i numer telefonu" ]
+      },
+      "languageCode": "pl"
+    }, {
+      "text": {
+        "text": [ "Zebrane informacje przechowujemy bezpiecznie zgodnie z zasadami RODO?" ]
+      },
+      "languageCode": "pl"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "reg_pesel_confirmed",
+      "value": false
+    } ],
+    "returnPartialResponses": true
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reg_pesel_confirmed",
+        "value": false
+      }, {
+        "parameter": "reg_profile_skipped",
+        "value": 0
+      } ]
+    },
+    "targetPage": "Reg-Collect-Profile",
+    "name": "76bb1a35-c7ca-4063-bfa5-25fcbac8aed7"
+  }, {
+    "intent": "small_talk.confirmation_no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "ok. No worries. Please visit the clinic 15 minutes before the appointment to complete the formal registration." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "ok. No worries. Please visit the clinic 15 minutes before the appointment to complete the formal registration." ]
+        },
+        "languageCode": "pl"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "reg_profile_skipped",
+        "value": 1
+      } ]
+    },
+    "targetPage": "Booking-New-Main",
+    "name": "949960d6-ff8c-425d-822c-5094cb79fb2a"
+  } ]
+}

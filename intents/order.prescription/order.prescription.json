@@ -1,0 +1,7 @@
+{
+  "name": "a9fe8112-a75f-41d1-92d9-0058c9390706",
+  "displayName": "order.prescription",
+  "priority": 500000,
+  "description": "Order a Prescription",
+  "numTrainingPhrases": 4
+}

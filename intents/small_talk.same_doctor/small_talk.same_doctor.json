@@ -1,0 +1,16 @@
+{
+  "name": "a8bd55b3-8777-44f4-b192-9d24686feca0",
+  "displayName": "small_talk.same_doctor",
+  "parameters": [ {
+    "id": "person",
+    "entityType": "@sys.person"
+  }, {
+    "id": "location",
+    "entityType": "@sys.location"
+  }, {
+    "id": "last-name",
+    "entityType": "@sys.last-name"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 18
+}

@@ -1,0 +1,10 @@
+{
+  "name": "b8b1da51-41fc-47cf-b397-d578caba5c8a",
+  "displayName": "Gabinet Webhook",
+  "genericWebService": {
+    "uri": "https://script.google.com/macros/s/AKfycbxR1-St0vkKwJkneXdksvKa7Ip6v7z2hUeJamVuGRbJEoawslfG/exec"
+  },
+  "timeout": {
+    "seconds": 29
+  }
+}

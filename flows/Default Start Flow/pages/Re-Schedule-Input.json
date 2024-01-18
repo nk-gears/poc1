@@ -1,0 +1,67 @@
+{
+  "name": "548c6479-d70a-4d97-8e68-24deb981dc1c",
+  "displayName": "Re-Schedule-Input",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "is_slot_shown",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.same_doctor",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "set-reschedule-params",
+      "setParameterActions": [ {
+        "parameter": "need_slot_selection",
+        "value": true
+      }, {
+        "parameter": "need_doctor_selection",
+        "value": false
+      }, {
+        "parameter": "next_route",
+        "value": "re-schedule"
+      }, {
+        "parameter": "get_avail_specialist",
+        "value": false
+      }, {
+        "parameter": "slot_refreshed",
+        "value": true
+      } ]
+    },
+    "targetPage": "Availability-Check",
+    "name": "481ba096-2961-4227-a60c-e316ea8e1fdf"
+  }, {
+    "intent": "small_talk.different_doctor",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "set-reschedule-params-diff",
+      "setParameterActions": [ {
+        "parameter": "need_slot_selection",
+        "value": true
+      }, {
+        "parameter": "doctor_selected",
+        "value": null
+      }, {
+        "parameter": "get_avail_specialist",
+        "value": true
+      }, {
+        "parameter": "need_doctor_selection",
+        "value": true
+      } ],
+      "returnPartialResponses": true
+    },
+    "targetPage": "Availability-Check",
+    "name": "aa7ce16d-960e-4395-b3f9-dad543a938bb"
+  }, {
+    "condition": "$session.params.actual_slot_selected != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Process-Re-Schedule",
+    "name": "93cd200a-fbe6-41c8-aff4-2aa85b22285a"
+  } ]
+}

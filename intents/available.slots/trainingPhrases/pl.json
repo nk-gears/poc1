@@ -1,0 +1,69 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Kiedy będzie dostępny "
+    }, {
+      "text": "endokrynolog dziecięcy",
+      "parameterId": "doctor-category"
+    }, {
+      "text": " ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "kiedy będzie dostępny "
+    }, {
+      "text": "endokrynolog",
+      "parameterId": "doctor-category"
+    }, {
+      "text": " ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Kiedy przyjmują lekarze "
+    }, {
+      "text": "endokrynolodzy",
+      "parameterId": "doctor-category"
+    }, {
+      "text": " ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Jakie są najbliższe wolne terminy do "
+    }, {
+      "text": "endokrynologa dziecięcego",
+      "parameterId": "doctor-category"
+    }, {
+      "text": " ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Jakie są najbliższe terminy "
+    }, {
+      "text": "do  urologa",
+      "parameterId": "doctor-category"
+    }, {
+      "text": " ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Jakie są najbliższe terminy do  "
+    }, {
+      "text": "endokrynologa",
+      "parameterId": "doctor-category"
+    }, {
+      "text": " ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  } ]
+}

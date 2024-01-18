@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "cm",
+    "synonyms": [ "cm", "centimeters" ],
+    "languageCode": "en"
+  }, {
+    "value": "in",
+    "synonyms": [ "in", "inches" ],
+    "languageCode": "en"
+  } ]
+}

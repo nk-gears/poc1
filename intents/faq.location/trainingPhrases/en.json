@@ -1,0 +1,51 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Where there is a clinic ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Where to get off from the bus ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Where to get off the "
+    }, {
+      "text": "tram",
+      "parameterId": "person",
+      "auto": true
+    }, {
+      "text": " ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Which "
+    }, {
+      "text": "tram",
+      "parameterId": "person",
+      "auto": true
+    }, {
+      "text": " reaches ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How to get from the train station?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How to reach you ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

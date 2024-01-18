@@ -1,0 +1,27 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "jaki jest adres przychodni?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "jaka jest lokalizacja przychodni?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "gdzie znajduje się przychodnia?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Gdzie jest wasza przychodnia?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  } ]
+}

@@ -1,0 +1,15 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "change category"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "change specialist"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

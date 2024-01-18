@@ -1,0 +1,26 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "what specialist you have ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Do you have an "
+    }, {
+      "text": "endocrinologist",
+      "parameterId": "doctor-category"
+    }, {
+      "text": " ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What are the available specialist in your clinic ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

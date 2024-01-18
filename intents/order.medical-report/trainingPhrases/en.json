@@ -1,0 +1,15 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "i need my medical report"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i would request my medical report via email"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

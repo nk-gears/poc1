@@ -1,0 +1,16 @@
+{
+  "name": "b7b6a1c4-ec3b-47cd-a9ec-e9734225d0da",
+  "displayName": "MovieTicket",
+  "parameters": [ {
+    "id": "person",
+    "entityType": "@sys.person"
+  }, {
+    "id": "unit-height",
+    "entityType": "@unit-height"
+  }, {
+    "id": "doctor-name",
+    "entityType": "@doctor-name"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}

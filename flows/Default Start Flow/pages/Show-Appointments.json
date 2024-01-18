@@ -1,0 +1,105 @@
+{
+  "name": "dcb81821-8542-4ad8-be5a-306397b17f52",
+  "displayName": "Show-Appointments",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "appointment.next",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "my-next-appointments",
+      "returnPartialResponses": true
+    },
+    "targetPage": "Show-Appointments",
+    "name": "871f372b-dc6c-4a83-a86c-700564af19c2"
+  }, {
+    "condition": "$session.params.has_appointments = true AND $session.params.appointment_detail != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "ilość zarezerwowanych przez ciebie wizyt to  $session.params.appointment_count " ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Najbliższa wizyta jest zaplanowana na dzień: $session.params.appointment_detail.appointmentDateFormatted\no godzinie $session.params.appointment_detail.appointmentTime\nu $session.params.appointment_detail.doctorInfo.title_e $session.params.appointment_detail.doctorInfo.firstname_e $session.params.appointment_detail.doctorInfo.lastname_e" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "You have $session.params.appointment_count upcoming appointments." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "The next immediate appointment is on \n$session.params.appointment_detail.appointmentDateFormatted\nat $session.params.appointment_detail.appointmentTime\nwith doctor $session.params.appointment_detail.doctorName" ]
+        },
+        "languageCode": "en"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.appointment_count \u003e 1",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Powiedz proszę \"Następne\" jeśli chcesz sprawdzić kiedy masz następne wizyty" ]
+              },
+              "languageCode": "pl"
+            }
+          }, {
+            "message": {
+              "text": {
+                "text": [ "Please say \"Next\" to hear next appointments" ]
+              },
+              "languageCode": "en"
+            }
+          } ]
+        } ]
+      } ],
+      "returnPartialResponses": true
+    },
+    "targetPage": "Anything-Else",
+    "name": "d4a50f8d-c2a3-4eb9-a82f-affb80640cb9"
+  }, {
+    "condition": "$session.params.has_appointments = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nie masz zaplanowanych wizyt w naszej przychodni" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "You have no appointments." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "has_appointments",
+        "value": null
+      } ],
+      "returnPartialResponses": true
+    },
+    "targetPage": "Anything-Else",
+    "name": "0c69df14-271c-4d47-82c2-de24df32ed95"
+  }, {
+    "condition": "$session.params.has_appointments = true AND $session.params.appointment_detail = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nie masz więcej zaplanowanych wizyt" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "No more appointments." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything-Else",
+    "name": "13ecf508-8a00-4bbc-9db3-2436db9cebbc"
+  } ],
+  "transitionRouteGroups": [ "Appointment Intents", "Clinic Faqs" ]
+}

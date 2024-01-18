@@ -1,0 +1,370 @@
+{
+  "name": "3b19f039-40ef-408f-8719-9158195ab4a2",
+  "displayName": "New1",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "languageCode": "en",
+        "dtmf": {
+        
+        }
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urologist", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hello, Welcome to a private endocrinology clinic, I am your virtual assistant." ]
+      }, {
+        "text": [ "How can I help you ?" ]
+      }, {
+        "text": [ "You can ask about your appointment, book a new appointment or  re-schedule your appointment" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "languageCode": "en",
+        "dtmf": {
+        
+        }
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urologist", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.new"
+      },
+      "currentPage": {
+        "name": "Booking-New-Main",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sure, I need some information for a new appointment" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urologist", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.new"
+      },
+      "currentPage": {
+        "name": "Show-Specialist-Categories",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "We have the following specialists in our clinic " ]
+      }, {
+        "text": [ "Pediatric Endocrinologist, Diabetologist, Urologist, Surgeon, Internal Medicine Specialist, Endocrinologist, Nuclear Medicine Specialist, Gynaecologist, Surgery" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urologist", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.new"
+      },
+      "currentPage": {
+        "name": "Show-Specialist-Categories",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Please tell us which specialist you want to meet ?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urologist", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.new"
+      },
+      "currentPage": {
+        "name": "Show-Specialist-Categories",
+        "flow": "Default Start Flow"
+      },
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "languageCode": "en",
+        "dtmf": {
+        
+        }
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "doctor_avail_category": "Urologist",
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urologist", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Show-Specialist-Categories",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "One moment. Checking doctors for Urologist" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "avail_doctor_count": 3,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "doctor_avail_category": "Urologist",
+        "doctor_avail_list": "Aleksander Biały - 2\n--\nPrzemysław Otlewski - 10\n--\nJacek Test - 12",
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urologist", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Show-Specialist-Categories",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "We have the following doctors for category Urologist" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "avail_doctor_count": 3,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "doctor_avail_category": "Urologist",
+        "doctor_avail_list": "Aleksander Biały - 2\n--\nPrzemysław Otlewski - 10\n--\nJacek Test - 12",
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urologist", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Aleksander Biały - 2\n--\nPrzemysław Otlewski - 10\n--\nJacek Test - 12" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "avail_doctor_count": 3,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "doctor_avail_category": "Urologist",
+        "doctor_avail_list": "Aleksander Biały - 2\n--\nPrzemysław Otlewski - 10\n--\nJacek Test - 12",
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urologist", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Please tell us the doctor name or enter the corresponding number followed by Hash." ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "languageCode": "en",
+        "dtmf": {
+        
+        }
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "avail_doctor_count": 3,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "doctor_avail_category": "Urologist",
+        "doctor_avail_list": "Aleksander Biały - 2\n--\nPrzemysław Otlewski - 10\n--\nJacek Test - 12",
+        "doctor_selected": "Aleksander Biały",
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urologist", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You have selected Aleksander Biały" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "avail_default_slots_count": 5,
+        "avail_doctor_count": 3,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "doc_info": {
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "lastname": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urologist", "Surgeon" ],
+          "timeframe": "Saturday 10:00 - 15:00"
+        },
+        "doctor_avail_category": "Urologist",
+        "doctor_avail_list": "Aleksander Biały - 2\n--\nPrzemysław Otlewski - 10\n--\nJacek Test - 12",
+        "doctor_selected": "Aleksander Biały",
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "slot_detail": {
+          "next_dates": [ "2021-08-26", "2021-08-28" ],
+          "next_dates_formatted": [ "26th August", "28th August" ],
+          "slot_date": "2021-08-21",
+          "slot_date_formatted": "21st August",
+          "time_slots": [ "12:30", "13:00", "13:30", "14:00", "14:30" ],
+          "time_slots_end": [ "13:00", "13:30", "14:00", "14:30", "15:00" ]
+        },
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urologist", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1629540119,
+    "nanos": 506056000
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "name": "bfd13adb-bd13-434e-a72d-43da3742ffc8",
+  "displayName": "Reg-Collect-Profile",
+  "form": {
+    "parameters": [ {
+      "displayName": "reg_firstname",
+      "required": true,
+      "entityType": "@sys.given-name",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Please tell your First Name" ]
+            },
+            "languageCode": "en"
+          }, {
+            "text": {
+              "text": [ "Podaj proszę swoje Imię" ]
+            },
+            "languageCode": "pl"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    }, {
+      "displayName": "reg_surname",
+      "required": true,
+      "entityType": "@sys.last-name",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Please tell your Surname" ]
+            },
+            "languageCode": "en"
+          }, {
+            "text": {
+              "text": [ "Podaj proszę swoje nazwisko" ]
+            },
+            "languageCode": "pl"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    }, {
+      "displayName": "use_this_caller_id",
+      "required": true,
+      "entityType": "@use_this_caller_id",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "We identified your caller number $session.params.caller_id_voice. Shall we use this ?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    }, {
+      "displayName": "reg_contact_number",
+      "required": true,
+      "entityType": "@sys.phone-number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Please provide your contact mobile number." ]
+            },
+            "languageCode": "en"
+          }, {
+            "text": {
+              "text": [ "Please provide your contact mobile number." ]
+            },
+            "languageCode": "pl"
+          } ]
+        }
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation_no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reg_contact_number",
+        "value": null
+      } ]
+    },
+    "name": "c1cda8ce-2717-4027-9a5c-16bc464040fc"
+  }, {
+    "condition": "$page.params.reg_contact_number.status = \"UPDATED\"",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "set-reg_contact_number_voice",
+      "setParameterActions": [ {
+        "parameter": "skip_pesel",
+        "value": true
+      } ]
+    },
+    "name": "f4b56142-2e5e-4e60-884c-958a40753371"
+  }, {
+    "condition": "$page.params.status = \"FINAL\" AND $page.params.use_this_caller_id = \"true\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thanks for the details. One moment please" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Dziękujemy za podanie danych. Poczekaj chwilę" ]
+        },
+        "languageCode": "pl"
+      } ],
+      "webhook": "Gabinet Webhook",
+      "tag": "set-reg_contact_number",
+      "setParameterActions": [ {
+        "parameter": "skip_pesel",
+        "value": true
+      } ]
+    },
+    "name": "0f774bc6-c8ac-4d24-b021-0e310364518c"
+  }, {
+    "condition": "$session.params.reg_contact_number_confirmed = true",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "new-registration"
+    },
+    "targetPage": "Booking-New-Main",
+    "name": "d0d00b69-d5e5-48a6-97a2-73a22a5878df"
+  } ]
+}

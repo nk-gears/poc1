@@ -1,0 +1,193 @@
+{
+  "name": "069ef385-e1b3-42d6-b831-13a9791e9fb6",
+  "displayName": "Show-Next-Slot-Dates",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "availability.next_dates",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "doctor-next-slots",
+      "setParameterActions": [ {
+        "parameter": "slot_refreshed",
+        "value": true
+      } ]
+    },
+    "targetPage": "Show-Next-Slot-Dates",
+    "name": "8712bba7-fc33-4560-9d65-9b4338eab727"
+  }, {
+    "intent": "pref_slot_date",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "set-slot-pref-date",
+      "setParameterActions": [ {
+        "parameter": "is_slot_shown",
+        "value": null
+      } ]
+    },
+    "targetPage": "Show-Slots",
+    "name": "c7098a29-1ec3-43fa-8744-91dab4c5a9bd"
+  }, {
+    "intent": "doctor.slot.selection",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You have selected $intent.params.slot_time slot on $session.params.slot_detail.slot_date_formatted. Is this right ?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "wybrałeś godzinę $intent.params.slot_time w dniu $session.params.slot_detail.slot_date_formatted" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Czy o ten termin ci chodziło?" ]
+        },
+        "languageCode": "pl"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "slot_refreshed",
+        "value": false
+      } ],
+      "returnPartialResponses": true
+    },
+    "name": "a096ffa6-ed54-4079-8977-4008d5c4a0be"
+  }, {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "set-pref_slot_time",
+      "setParameterActions": [ {
+        "parameter": "slot_selected",
+        "value": true
+      } ],
+      "returnPartialResponses": true
+    },
+    "name": "3838485c-b9e9-47ec-9eb2-02b73c60ea1a"
+  }, {
+    "intent": "small_talk.confirmation_no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Please tell us which slot you want on $session.params.slot_detail.slot_date_formatted\n" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "$session.params.slot_detail.time_slots_f" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Powiedz proszę który termin chciałbyś wybrać w dniu $session.params.slot_detail.slot_date_formatted\n" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "$session.params.slot_detail.time_slots_f" ]
+        },
+        "languageCode": "pl"
+      } ],
+      "returnPartialResponses": true
+    },
+    "name": "5528bbe3-784e-45fa-bb10-8a996af53811"
+  }, {
+    "condition": "$session.params.avail_default_slots_count = 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "No more dates/slots available." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Please let us know which date you are looking for ?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Niestety nie mamy więcej wolnych terminów" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Powiedz proszę od jakiej daty mam zacząć szukać? Możesz powiedzieć na przykład \"od piętnastego następnego miesiąca\"" ]
+        },
+        "languageCode": "pl"
+      } ],
+      "returnPartialResponses": true
+    },
+    "name": "9a42e622-4a37-479c-af1d-afbaf02a2c73"
+  }, {
+    "condition": "$session.params.avail_default_slots_count \u003e= 1 AND $session.params.slot_refreshed = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "On $session.params.slot_detail.slot_date_formatted, we have $session.params.avail_default_slots_count slots at, \n" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "$session.params.slot_detail.time_slots_f" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Please let us know which slot you want ?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "W dniu $session.params.slot_detail.slot_date_formatted mamy $session.params.avail_default_slots_count  wolnych terminów" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "$session.params.slot_detail.time_slots_f" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Powiedz proszę który termin wybierasz? " ]
+        },
+        "languageCode": "pl"
+      } ]
+    },
+    "name": "2e2c4a69-fd35-489e-930c-a7e10abf5db0"
+  }, {
+    "condition": "$session.params.slot_selected_valid = true",
+    "triggerFulfillment": {
+      "returnPartialResponses": true
+    },
+    "targetPage": "Redirect-Page",
+    "name": "d35fe7ab-d01e-4d8d-98e4-b11bddacaeba"
+  }, {
+    "condition": "$session.params.slot_selected_valid = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "\nThe slot selected $session.params.actual_slot_selected is not valid\n" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Please provide valid slots from $session.params.slot_detail.time_slots_f" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Niestety wybrałeś błedny termin $session.params.actual_slot_selected\n" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Wybierz proszę spośród tych terminów $session.params.slot_detail.time_slots_f" ]
+        },
+        "languageCode": "pl"
+      } ]
+    },
+    "name": "a82bb2ac-2871-446b-95ef-ab31fea96b0b"
+  } ]
+}

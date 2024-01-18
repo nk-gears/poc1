@@ -1,0 +1,10 @@
+{
+  "name": "0744ba42-cec0-43b0-96f3-ec6d660b461e",
+  "displayName": "available.specialists",
+  "parameters": [ {
+    "id": "doctor-category",
+    "entityType": "@doctor-category"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 6
+}

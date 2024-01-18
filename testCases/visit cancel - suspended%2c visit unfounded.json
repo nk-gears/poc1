@@ -1,0 +1,181 @@
+{
+  "name": "24ea84f2-f7fc-482d-8a27-5a5bfef6998e",
+  "displayName": "visit cancel - suspended, visit unfounded",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "cześć"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Witam w prywatnej przychodni endokrynologicznej, na Alei Kasztanowej 3. Pomogę ci zarezerwować wizytę, przenieść termin wizyty, odwołać wizytę lub sprawdzić na kiedy masz zaplanowane wizyty w naszej przychodni. Powiedz proszę, którą z tych rzeczy chciałbyś zrobić? Na przykład: \"chciałbym umówić wizytę\", \"chcę odwołać wizytę\", \"chcę zmienić termin mojej wizyty\"" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "test" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "chcę odwołać wizytę"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "next": "my-bookings",
+        "next_route": "cancel",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.cancel"
+      },
+      "currentPage": {
+        "name": "Collect-Pesel-5",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Dzwoniłeś już do nas z tego numeru telefonu" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Podaj proszę po kolei 5 ostatnich cyfr swojego numeru pesel. " ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "02690"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "appointment_count": 0,
+        "appointment_next_count": -1,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "has_appointments": false,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "next": "my-bookings",
+        "next_index": 1,
+        "next_route": "cancel",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_count": 1,
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Cancel-Confirm",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Pozwól proszę, że sprawdzę na kiedy masz zaplanowane wizyty w naszej przychodni" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1639293031,
+    "nanos": 484089000
+  }
+}

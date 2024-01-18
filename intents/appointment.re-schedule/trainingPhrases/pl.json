@@ -1,0 +1,27 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "chcę przełożyć moją wizytę"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Chcę odwołać i przełożyć moją wizytę"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Chcę, zmienić termin mojej wizyty"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Chcę przełożyć moją wizytę"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  } ]
+}

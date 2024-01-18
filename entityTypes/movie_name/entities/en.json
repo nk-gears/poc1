@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "Starwars",
+    "synonyms": [ "Starwars", "star wars" ],
+    "languageCode": "en"
+  }, {
+    "value": "Spiderman",
+    "synonyms": [ "Spidermarn", "spider man", "spider" ],
+    "languageCode": "en"
+  } ]
+}

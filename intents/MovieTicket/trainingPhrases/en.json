@@ -1,0 +1,57 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "get me a movie ticket",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i want to go for a Spiderman movie ",
+      "auto": true
+    }, {
+      "text": "in",
+      "parameterId": "unit-height",
+      "auto": true
+    }, {
+      "text": " the evening ",
+      "auto": true
+    }, {
+      "text": "3",
+      "parameterId": "doctor-name",
+      "auto": true
+    }, {
+      "text": " PM",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "get a ticket for a movie Spiderman",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i want to book a "
+    }, {
+      "text": "movie",
+      "parameterId": "person",
+      "auto": true
+    }, {
+      "text": " ticket"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "book a ticket for a movie",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

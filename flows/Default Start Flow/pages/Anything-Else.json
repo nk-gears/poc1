@@ -1,0 +1,158 @@
+{
+  "name": "9de7501b-497a-41b2-968a-29112ae1de1a",
+  "displayName": "Anything-Else",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "W czym jeszcze możemy ci pomóc?" ]
+      },
+      "languageCode": "pl"
+    }, {
+      "text": {
+        "text": [ "Is there anything else we could help you ?" ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "action_ended",
+      "value": true
+    }, {
+      "parameter": "appointment_count",
+      "value": null
+    }, {
+      "parameter": "appointment_detail",
+      "value": null
+    }, {
+      "parameter": "next_route",
+      "value": null
+    }, {
+      "parameter": "actual_slot_selected",
+      "value": null
+    }, {
+      "parameter": "appointment_next_count",
+      "value": null
+    }, {
+      "parameter": "avail_default_slots_count",
+      "value": null
+    }, {
+      "parameter": "avail_doctor_count",
+      "value": null
+    }, {
+      "parameter": "booking_slot_selected",
+      "value": null
+    }, {
+      "parameter": "doctor_avail_category",
+      "value": null
+    }, {
+      "parameter": "doctor_avail_list",
+      "value": null
+    }, {
+      "parameter": "doctor_selected",
+      "value": null
+    }, {
+      "parameter": "get_avail_specialist",
+      "value": null
+    }, {
+      "parameter": "has_appointments",
+      "value": null
+    }, {
+      "parameter": "is_slot_shown",
+      "value": null
+    }, {
+      "parameter": "need_doctor_selection",
+      "value": null
+    }, {
+      "parameter": "next_index",
+      "value": null
+    }, {
+      "parameter": "next_route",
+      "value": null
+    }, {
+      "parameter": "booking_info",
+      "value": null
+    }, {
+      "parameter": "slot_detail",
+      "value": null
+    }, {
+      "parameter": "slot_time",
+      "value": null
+    }, {
+      "parameter": "pesel_last_5_count",
+      "value": null
+    }, {
+      "parameter": "pesel_full_count",
+      "value": null
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+        "allowPlaybackInterruption": true
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.goodbye",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Dziękuję za kontakt z naszą przychodnią i życzę miłego dnia" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Thanks for contacting virtual assistant. Have a great day." ]
+        },
+        "languageCode": "en"
+      } ],
+      "returnPartialResponses": true
+    },
+    "targetPage": "End Session",
+    "name": "7d7cae6f-0ffa-4afe-9ce4-a2b05ec59d43"
+  }, {
+    "intent": "small_talk.once_more",
+    "condition": "$session.params.next_route = \"my-bookings\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Show-Appointments",
+    "name": "39b3abd6-8017-408d-ae9c-6ac5d0e06957"
+  }, {
+    "intent": "small_talk.once_more",
+    "condition": "$session.params.next_route = \"new-booking\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Booking-Show-Confirmation",
+    "name": "efa9817f-d764-46ce-82c1-cdadaa58a6a7"
+  }, {
+    "intent": "small_talk.once_more",
+    "condition": "$session.params.next_route = \"re-schedule\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Re-Schedule-Final-Confirmation",
+    "name": "92e60e47-4676-4b46-b144-350c9e0b9a2a"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I couldn't understand that. Please try again" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "b61988fa-b94f-4f2f-8836-b88055d6d756"
+  }, {
+    "targetPage": "Start Page",
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+    
+    },
+    "name": "e314b01c-7dbd-4bae-89db-e25ba36b7996"
+  } ],
+  "transitionRouteGroups": [ "Appointment Intents" ]
+}

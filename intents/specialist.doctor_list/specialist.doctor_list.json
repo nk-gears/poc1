@@ -1,0 +1,16 @@
+{
+  "name": "04e935ab-2842-4309-bfee-0ca8d799aca8",
+  "displayName": "specialist.doctor_list",
+  "parameters": [ {
+    "id": "doctor-category",
+    "entityType": "@doctor-category"
+  }, {
+    "id": "last-name",
+    "entityType": "@sys.last-name"
+  }, {
+    "id": "last-name1",
+    "entityType": "@sys.last-name"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 7
+}

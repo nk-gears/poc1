@@ -1,0 +1,58 @@
+{
+  "name": "ad3e5a67-0414-41d8-9399-1c9254336532",
+  "displayName": "Booking-New-Main",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "next_route",
+      "value": "new-booking"
+    }, {
+      "parameter": "get_avail_specialist",
+      "value": true
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.booking_slot_selected = false OR $session.params.booking_slot_selected = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Oczywiście! Wybierz proszę  lekarza do którego chciałbyś się umówić. Zaczniemy od wybrania specjalizacji." ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Sure, I need some information for a new appointment" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "next_route",
+        "value": "new-booking"
+      }, {
+        "parameter": "need_doctor_selection",
+        "value": true
+      } ],
+      "returnPartialResponses": true
+    },
+    "targetPage": "Availability-Check",
+    "name": "5e1be43c-3fc7-4943-94c9-a88094eea0ad"
+  }, {
+    "condition": "($session.params.booking_slot_selected = true AND $session.params.pesel_verified = true) OR $session.params.skip_pesel = true",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "booking-new",
+      "returnPartialResponses": true
+    },
+    "targetPage": "Booking-Show-Confirmation",
+    "name": "a05af6e8-06f6-41c1-a5ad-866ae2c58989"
+  }, {
+    "condition": "$session.params.booking_slot_selected = true AND ($session.params.pesel_verified = false OR $session.params.pesel_verified = null OR $session.params.skip_pesel = null)",
+    "triggerFulfillment": {
+      "returnPartialResponses": true
+    },
+    "targetPage": "User-Verification",
+    "name": "a61abd56-0a52-4577-ad7a-d14927ace087"
+  } ]
+}

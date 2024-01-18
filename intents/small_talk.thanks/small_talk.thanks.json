@@ -1,0 +1,13 @@
+{
+  "name": "03e0e4f4-fed1-4358-be96-92a6dd52fdcc",
+  "displayName": "small_talk.thanks",
+  "parameters": [ {
+    "id": "last-name",
+    "entityType": "@sys.last-name"
+  }, {
+    "id": "location",
+    "entityType": "@sys.location"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 17
+}

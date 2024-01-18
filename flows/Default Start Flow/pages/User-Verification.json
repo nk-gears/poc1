@@ -1,0 +1,36 @@
+{
+  "name": "7d5fd799-ecdb-462a-a7b9-bdc715764172",
+  "displayName": "User-Verification",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.valid_phone = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Dzwoniłeś już do nas z tego numeru telefonu" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "You'r Number is already registered with us. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "next",
+        "value": "my-bookings"
+      } ]
+    },
+    "targetPage": "Collect-Pesel-5",
+    "name": "ac19e6f6-7e72-4e7c-98e5-32ab1034e948"
+  }, {
+    "condition": "$session.params.valid_phone != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect-Pesel-Full",
+    "name": "59568ea8-749c-4a79-b337-8f980234c275"
+  } ]
+}

@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "@sys.number:number @unit-weight",
+    "synonyms": [ "@sys.number:number @unit-weight" ],
+    "languageCode": "en"
+  } ]
+}

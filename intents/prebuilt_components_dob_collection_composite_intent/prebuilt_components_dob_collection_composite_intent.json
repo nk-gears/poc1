@@ -1,0 +1,10 @@
+{
+  "name": "77423a0f-395c-4bdc-bb30-26dc76615e4f",
+  "displayName": "prebuilt_components_dob_collection_composite_intent",
+  "parameters": [ {
+    "id": "dob",
+    "entityType": "@prebuilt_components_dob_collection_dob_composite"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 20
+}

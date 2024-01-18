@@ -1,0 +1,38 @@
+{
+  "name": "8f602bff-646f-4fa7-b7c8-3c88a3054e0f",
+  "displayName": "Appointment Intents",
+  "transitionRoutes": [ {
+    "intent": "appointment.new",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Booking-New-Main",
+    "name": "5414ec85-959a-42a9-a876-462ffa831584"
+  }, {
+    "intent": "appointment.cancel",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "next_route",
+        "value": "cancel"
+      } ]
+    },
+    "targetPage": "Cancel-Appointment-Main",
+    "name": "24f3745d-7acf-4dad-83e7-1a0f541999c6"
+  }, {
+    "intent": "appointment.re-schedule",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Re-Schedule-Main",
+    "name": "220a9b7d-40bd-428b-a5dd-b55d2aed8cae"
+  }, {
+    "intent": "appointment.next",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "my-next-appointments",
+      "returnPartialResponses": true
+    },
+    "targetPage": "Show-Appointments",
+    "name": "157ba56b-99c6-4634-9859-ef2323d819e6"
+  } ]
+}

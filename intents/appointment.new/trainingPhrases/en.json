@@ -1,0 +1,196 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "book a new appointment with "
+    }, {
+      "text": "Samuel",
+      "parameterId": "person",
+      "auto": true
+    }, {
+      "text": " "
+    }, {
+      "text": "tomorrow at 6 PM",
+      "parameterId": "preferred-date-time",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "book a new appointment with "
+    }, {
+      "text": "Samuel",
+      "parameterId": "person",
+      "auto": true
+    }, {
+      "text": " day "
+    }, {
+      "text": "after tomorrow",
+      "parameterId": "preferred-date-time",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "book a new appointment with "
+    }, {
+      "text": "Samuel",
+      "parameterId": "person",
+      "auto": true
+    }, {
+      "text": " "
+    }, {
+      "text": "tomorrow",
+      "parameterId": "preferred-date-time",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "book a new appointment with Doctor "
+    }, {
+      "text": "Samuel",
+      "parameterId": "person",
+      "auto": true
+    }, {
+      "text": " "
+    }, {
+      "text": "next week",
+      "parameterId": "date-period",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "book a new appointment with "
+    }, {
+      "text": "Samuel",
+      "parameterId": "person",
+      "auto": true
+    }, {
+      "text": " "
+    }, {
+      "text": "next week",
+      "parameterId": "date-period",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Book a appointment for "
+    }, {
+      "text": "Endocrinology"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Book a new appointment with Doctor"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "book a new appointment with "
+    }, {
+      "text": "Samuel",
+      "parameterId": "person",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "book a new appointment"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "book an appointment"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i want to make an appointment "
+    }, {
+      "text": "tomorrow",
+      "parameterId": "preferred-date-time"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "make an appointment "
+    }, {
+      "text": "tomorrow",
+      "parameterId": "preferred-date-time",
+      "auto": true
+    }, {
+      "text": " with "
+    }, {
+      "text": "Samuel",
+      "parameterId": "person",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i want to book a visit with Doctor "
+    }, {
+      "text": "Samuel",
+      "parameterId": "person",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i want to make an appointment with any "
+    }, {
+      "text": "Gyanecologist"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "make an appointment with Doctor "
+    }, {
+      "text": "Samuel",
+      "parameterId": "person",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "book an appointment with "
+    }, {
+      "text": "Endocrinologist"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "book an appointment with "
+    }, {
+      "text": "Samuel",
+      "parameterId": "person",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i would like to make a new appointment"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

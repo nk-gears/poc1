@@ -1,0 +1,10 @@
+{
+  "name": "6413cf20-31bd-45ff-9d0b-6d94d65263a9",
+  "displayName": "select_slot_date",
+  "parameters": [ {
+    "id": "slot_pref_date",
+    "entityType": "@sys.date-time"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

@@ -1,0 +1,13 @@
+{
+  "name": "6694f9f4-a8bf-4e69-8b3d-4b7c76202432",
+  "displayName": "prebuilt_components_arrange_appt_change_date_slot",
+  "parameters": [ {
+    "id": "time",
+    "entityType": "@sys.time"
+  }, {
+    "id": "change_dateslot",
+    "entityType": "@prebuilt_components_arrange_appt_change_dateslot"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 17
+}

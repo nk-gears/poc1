@@ -1,0 +1,95 @@
+{
+  "name": "1509c166-11c0-486b-b415-058cb1eadc46",
+  "displayName": "Cancel-Confirm",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.nevermind",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Page",
+    "name": "e8638e00-e94e-40b5-807b-6870738c22d9"
+  }, {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "booking-cancel"
+    },
+    "name": "e21f47c6-38fc-4175-ab36-001eb893c16b"
+  }, {
+    "intent": "small_talk.confirmation_no",
+    "triggerFulfillment": {
+    
+    },
+    "name": "d4f39629-486f-4a80-b6f5-a7d42cdc6db9"
+  }, {
+    "condition": "$session.params.booking_cancelled = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Odwołujesz rezerwcję do $session.params.appointment_detail.doctorInfo.title_g \n\n$session.params.appointment_detail.doctorInfo.firstname_g $session.params.appointment_detail.doctorInfo.lastname_g\n\no godzinie $session.params.appointment_detail.appointmentTime $session.params.appointment_detail.appointmentDateFormatted.\n\nData odwoływanej wizyty: $session.params.appointment_detail.appointmentDateFormatted. \nGodzina rezerwacji: $session.params.appointment_detail.appointmentTime." ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Rezerwacja została odwołana" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Your booking  with Doctor $session.params.appointment_detail.doctorName on $session.params.appointment_detail.appointmentDateFormatted at  $session.params.appointment_detail.appointmentTime  has been cancelled." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything-Else",
+    "name": "81e00ce7-7027-4d71-999a-9ccd48bb8830"
+  }, {
+    "condition": "$session.params.booking_cancelled = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nie możemy odwołać tej wizyty z przyczyn technicznych. Proszę zadzwoń później. Przepraszamy" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "There are some issues in cancelling your appointment. Please try later ." ]
+        },
+        "languageCode": "en"
+      } ],
+      "returnPartialResponses": true
+    },
+    "targetPage": "Anything-Else",
+    "name": "950f6115-d273-478f-ae9d-8851e9bb5bf5"
+  }, {
+    "condition": "$session.params.has_appointments = true AND $session.params.cancel_selected != 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Doktor $session.params.appointment_detail.doctorName miał cię przyjąć w dniu $session.params.appointment_detail.appointmentDateFormatted  o godzinie $session.params.appointment_detail.appointmentTime " ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Czy chcesz odwołać tą rezerwację ?" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "You have an appointment with Doctor $session.params.appointment_detail.doctorName on $session.params.appointment_detail.appointmentDateFormatted at  $session.params.appointment_detail.appointmentTime " ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Do you wish to cancel this appointment ?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "returnPartialResponses": true
+    },
+    "name": "b7c8b21b-232c-427e-ab77-778148aa9c13"
+  } ]
+}

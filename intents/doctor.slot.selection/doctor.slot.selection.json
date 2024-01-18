@@ -1,0 +1,13 @@
+{
+  "name": "8edda733-eff8-4637-882a-d62be65e8529",
+  "displayName": "doctor.slot.selection",
+  "parameters": [ {
+    "id": "slot_time",
+    "entityType": "@sys.time"
+  }, {
+    "id": "slot_date",
+    "entityType": "@sys.date"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 12
+}

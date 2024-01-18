@@ -1,0 +1,57 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "chcę sie umówić na wizytę na "
+    }, {
+      "text": "nfz",
+      "parameterId": "visit_type-nfz"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "chcę umówić się do doktora na "
+    }, {
+      "text": "nfz",
+      "parameterId": "visit_type-nfz"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "proszę mi pomoc umówić się na wizytę na "
+    }, {
+      "text": "nfz",
+      "parameterId": "visit_type-nfz"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "cześć chcę się umówić na wizytę na "
+    }, {
+      "text": "nfz",
+      "parameterId": "visit_type-nfz"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "chciałbym sie zarejestrować na wizytę na "
+    }, {
+      "text": "nfz",
+      "parameterId": "visit_type-nfz"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "chciałbym się umówić na wizytę w ramach "
+    }, {
+      "text": "nfz",
+      "parameterId": "visit_type-nfz"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  } ]
+}

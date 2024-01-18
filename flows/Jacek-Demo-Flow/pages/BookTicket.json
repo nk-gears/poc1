@@ -1,0 +1,73 @@
+{
+  "name": "adec4123-81f8-4097-b25e-b5c201c52d88",
+  "displayName": "BookTicket",
+  "form": {
+    "parameters": [ {
+      "displayName": "MovieName",
+      "required": true,
+      "entityType": "@movie_name",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Please tell us which movieyou want ?\n\nWe have \n\nStarwars\n\nSpiderman\n" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Ok, We need some information for booking a movie ticket" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "condition": "$session.params.MovieName != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok Movie Booked" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "e67dae75-4e17-42da-a7df-bf5a64595de6"
+  }, {
+    "intent": "small_talk.confirmation_no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Please choose the movie again ?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "MovieName",
+        "value": null
+      } ]
+    },
+    "name": "979f6f9c-6677-4b9e-a4d1-66dcb425128b"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok, You have selected $session.params.MovieName is that right ?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "6d58acb1-25d4-4c5a-8ab7-adbf202c1d15"
+  } ]
+}

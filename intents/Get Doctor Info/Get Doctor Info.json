@@ -1,0 +1,22 @@
+{
+  "name": "9135fafc-6261-4989-9e11-5492bc2c0554",
+  "displayName": "Get Doctor Info",
+  "parameters": [ {
+    "id": "user-pref-doctor",
+    "entityType": "@doctor-name"
+  }, {
+    "id": "doc_name",
+    "entityType": "@doc_name"
+  }, {
+    "id": "unit-height",
+    "entityType": "@unit-height"
+  }, {
+    "id": "doctor-category",
+    "entityType": "@doctor-category"
+  }, {
+    "id": "date-time",
+    "entityType": "@sys.date-time"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}

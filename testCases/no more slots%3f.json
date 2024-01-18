@@ -1,0 +1,590 @@
+{
+  "name": "611be4ce-6c49-48e1-a24a-d9107f0be237",
+  "displayName": "no more slots?",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "  Hello, Welcome to a private endocrinology clinic, I am your virtual assistant.\n" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "  How can i assist you today ?\n" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "  You can ask about your appointment, book a new appointment,  re-schedule your appointment or cancel appointment" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "i want to reschedule my appointment"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "next": "my-bookings",
+        "next_route": "re-schedule",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.re-schedule"
+      },
+      "currentPage": {
+        "name": "Collect-Pesel-5",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You'r Number is already registered with us. " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Please provide your last 5 digit pesel number" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "02690"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": null,
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal -Test",
+          "nfz": null,
+          "nip": null,
+          "pcj_dom": null,
+          "pcj_id": "26936",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": null,
+          "pcj_okreslenie": null,
+          "pcj_osobaupowazniona": null,
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": null,
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar-Test",
+          "teryt_simc_sym": null,
+          "zip_code": "50-532"
+        },
+        "next": "my-bookings",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Anything-Else",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You don't have any appointments to postpone" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Is there anything else we could help you ?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "i want to book a new appointment"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": null,
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal -Test",
+          "nfz": null,
+          "nip": null,
+          "pcj_dom": null,
+          "pcj_id": "26936",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": null,
+          "pcj_okreslenie": null,
+          "pcj_osobaupowazniona": null,
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": null,
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar-Test",
+          "teryt_simc_sym": null,
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.new"
+      },
+      "currentPage": {
+        "name": "Show-Specialist-Categories",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sure, I need some information for a new appointment" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "We have the following specialists in our clinic " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Pediatric Endocrinologist, Diabetologist, Urology, Surgeon, Internal Medicine Specialist, Endocrinologist, Nuclear Medicine Specialist, Gynaecologist, Surgery" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Please tell us which specialist you want to meet ?" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "You can always switch category by saying \"Change Category\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "urologist"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_doctor_count": 3,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doctor_avail_category": "Urology",
+        "doctor_avail_list": "Aleksander Biały - 2\n--\nPrzemysław Otlewski - 10\n--\nJacek Test - 12",
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": null,
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal -Test",
+          "nfz": null,
+          "nip": null,
+          "pcj_dom": null,
+          "pcj_id": "26936",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": null,
+          "pcj_okreslenie": null,
+          "pcj_osobaupowazniona": null,
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": null,
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar-Test",
+          "teryt_simc_sym": null,
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "One moment. Checking doctors for Urology" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "We have the following doctors for category Urology" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Aleksander Biały - 2\n--\nPrzemysław Otlewski - 10\n--\nJacek Test - 12" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Please tell us the doctor name or enter the corresponding number followed by Hash." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "You can always  change  by saying \"Change Doctor\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "2"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_default_slots_count": 2,
+        "avail_doctor_count": 3,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "lastname": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urology", "Surgeon" ],
+          "timeframe": "Saturday 10:00 - 15:00"
+        },
+        "doctor_avail_category": "Urology",
+        "doctor_avail_list": "Aleksander Biały - 2\n--\nPrzemysław Otlewski - 10\n--\nJacek Test - 12",
+        "doctor_selected": "Aleksander Biały",
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "is_slot_shown": 1,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": null,
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal -Test",
+          "nfz": null,
+          "nip": null,
+          "pcj_dom": null,
+          "pcj_id": "26936",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": null,
+          "pcj_okreslenie": null,
+          "pcj_osobaupowazniona": null,
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": null,
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar-Test",
+          "teryt_simc_sym": null,
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_detail": {
+          "next_dates": [ "2021-10-21", "2021-10-23", "2021-10-28" ],
+          "next_dates_formatted": [ "21st October", "23rd October", "28th October" ],
+          "slot_date": "2021-10-21",
+          "slot_date_formatted": "21st October",
+          "time_slots": [ "09:00", "09:30" ],
+          "time_slots_end": [ "09:30", "10:00" ],
+          "time_slots_f": [ "09 hours", "09:30" ]
+        },
+        "slot_refreshed": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Show-Slots",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You have selected Aleksander Biały" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Doctor Aleksander Biały is specialized  in\n\nUrology, Surgeon and usually available on Saturday 10:00 - 15:00" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "The next immediate available slot with Doctor Aleksander Biały  is " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "On 21st October, we have 2 slots at, \n" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "09 hours, 09:30" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Please let us know which slot you want ? " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "If you want slot for other dates please say \"next dates\"" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "To choose a different doctor, say \"change doctor\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "next dates"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_default_slots_count": 0,
+        "avail_doctor_count": 3,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0,
+          "next_date": null
+        },
+        "doc_info": {
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "lastname": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urology", "Surgeon" ],
+          "timeframe": "Saturday 10:00 - 15:00"
+        },
+        "doctor_avail_category": "Urology",
+        "doctor_avail_list": "Aleksander Biały - 2\n--\nPrzemysław Otlewski - 10\n--\nJacek Test - 12",
+        "doctor_selected": "Aleksander Biały",
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "is_slot_shown": 1,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": null,
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal -Test",
+          "nfz": null,
+          "nip": null,
+          "pcj_dom": null,
+          "pcj_id": "26936",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": null,
+          "pcj_okreslenie": null,
+          "pcj_osobaupowazniona": null,
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": null,
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar-Test",
+          "teryt_simc_sym": null,
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26936",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_detail": {
+          "next_dates": [ "2021-10-21", "2021-10-23", "2021-10-28" ],
+          "next_dates_formatted": [ "21st October", "23rd October", "28th October" ],
+          "slot_date_formatted": "1st January",
+          "time_slots": [ ],
+          "time_slots_end": [ ],
+          "time_slots_f": [ ]
+        },
+        "slot_refreshed": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "availability.next_dates"
+      },
+      "currentPage": {
+        "name": "Show-Next-Slot-Dates",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "One moment Please. Checking" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "No more dates/slots available." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Please let us know which date you are looking for ?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1634684740,
+    "nanos": 347574000
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "name": "2c7fa9f4-521f-4a06-ae9f-97ce0ae3ed3c",
+  "displayName": "Collect-Pesel-Full",
+  "form": {
+    "parameters": [ {
+      "displayName": "pesel_number",
+      "required": true,
+      "entityType": "@sys.number-sequence",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Please provide 11 digit pesel number by using the phone keypad followed by hash symbol." ]
+            },
+            "languageCode": "en"
+          }, {
+            "text": {
+              "text": [ "Podaj proszę cyfra po cyfrze swój numer  pesel. Możesz go także wpisać na klawiaturze telefonu i zakończyć krzyżykiem" ]
+            },
+            "languageCode": "pl"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 12,
+          "finishDigit": "#",
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "pesel_number",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "returnPartialResponses": true
+    },
+    "targetPage": "Reg-Init",
+    "name": "b83b4917-e1a2-465c-8e03-28f72cfa97cb"
+  }, {
+    "intent": "user.register",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Reg-Collect-Profile",
+    "name": "07398bca-6a50-4b86-b8c1-cb47a7f8aa0a"
+  }, {
+    "intent": "small_talk.confirmation_no",
+    "triggerFulfillment": {
+    
+    },
+    "name": "b941f15a-4039-4084-a8c4-03aff04df7cc"
+  }, {
+    "condition": "$page.params.pesel_number.status = \"UPDATED\"",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "verify-identity",
+      "returnPartialResponses": true
+    },
+    "name": "0f5bcea9-2659-4241-a59e-6bbf13f6c16d"
+  }, {
+    "condition": "$session.params.user_exists = false AND $session.params.pesel_valid = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "We couldn't find any records associated with this PESEL." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Please say \"Register\" if you want to register with us." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Dla podanego numeru PESEL nie możemy znaleźć dokumentacji w naszej przychodni" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Jeśli chcesz zostać naszym pacjentem powiedz proszę \"ZAREJESTRUJ\"" ]
+        },
+        "languageCode": "pl"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "pesel_number",
+        "value": ""
+      } ]
+    },
+    "name": "5b950c52-7dc0-4e06-8c78-aae0d494f211"
+  }, {
+    "condition": "$session.params.user_exists = false AND $session.params.pesel_valid = false AND $session.params.pesel_full_count \u003c= 4",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Invalid PESEL Number $session.params.pesel_full_voice .  Please try again." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Please say \"Register\" if you want to register with us." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Podany PESEL jest niepoprawny. Spróbuj jeszcze raz go wprowadzić" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Jeśli chcesz się zarejestrować w naszej przychodni, co wiąże się z podaniem tylko imienia, nazwiska i numeru telefonu powiedz proszę \"ZAREJESTRUJ\"" ]
+        },
+        "languageCode": "pl"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "pesel_number",
+        "value": null
+      } ]
+    },
+    "name": "61114cce-d7b6-4cf2-879b-1be53d790219"
+  }, {
+    "condition": "$session.params.pesel_full_count \u003e 4",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, We cannot verify your identity. Please try again later." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "pesel_full_count",
+        "value": null
+      } ]
+    },
+    "targetPage": "Anything-Else",
+    "name": "5f1d4ada-915c-4782-8bb4-7a4afb01c7e5"
+  }, {
+    "condition": "$session.params.pesel_verified = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Redirect-Page",
+    "name": "cb579ecb-ac1a-4462-af31-9c2023384b2c"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "fa61a5fd-dbde-47d8-91c9-b6aade8fc519",
+  "displayName": "@dtmf",
+  "parameters": [ {
+    "id": "number",
+    "entityType": "@sys.number"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

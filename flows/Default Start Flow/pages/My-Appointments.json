@@ -1,0 +1,31 @@
+{
+  "name": "eeaadc6d-c7af-4c34-8bd5-6da169f3ce26",
+  "displayName": "My-Appointments",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "next_route",
+      "value": "my-bookings"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.pesel_verified = null OR $session.params.pesel_verified = false OR $session.params.pesel_verified = \"\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "User-Verification",
+    "name": "3914fc68-0a70-4555-869a-612d66771f1d"
+  }, {
+    "condition": "$session.params.pesel_verified = true",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "my-appointments",
+      "returnPartialResponses": true
+    },
+    "targetPage": "Show-Appointments",
+    "name": "580278ac-49e7-4908-b48c-98b99a1bef57"
+  } ],
+  "transitionRouteGroups": [ "Clinic Faqs", "Appointment Intents" ]
+}

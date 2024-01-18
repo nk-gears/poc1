@@ -1,0 +1,118 @@
+{
+  "name": "2c67821a-5e61-4544-8dc1-fd040d3af8a1",
+  "displayName": "Collect-Pesel-5",
+  "form": {
+    "parameters": [ {
+      "displayName": "pesel_last_5",
+      "required": true,
+      "entityType": "@sys.number-sequence",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Please provide your last 5 digit pesel number" ]
+            },
+            "languageCode": "en"
+          }, {
+            "text": {
+              "text": [ "Podaj proszę cyfra po cyfrze 5 ostatnich cyfr swojego numeru pesel. " ]
+            },
+            "languageCode": "pl"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 6,
+          "finishDigit": "#",
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "webhook": "Gabinet Webhook",
+      "tag": "verify-pesel-5",
+      "returnPartialResponses": true
+    },
+    "name": "8b46753e-ef9a-452e-8687-2dbe872d00e9"
+  }, {
+    "condition": "$session.params.next_route = \"cancel\" AND $session.params.pesel_verified = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cancel-Appointment-Main",
+    "name": "dfd6daab-1b0d-4bb3-9b00-68d44923be9f"
+  }, {
+    "condition": "$session.params.pesel_verified = true AND $session.params.next_route = \"my-bookings\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You are verified now." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Dziękuję! Zostałeś poprawnie zweryfikowany!" ]
+        },
+        "languageCode": "pl"
+      } ],
+      "returnPartialResponses": true
+    },
+    "targetPage": "My-Appointments",
+    "name": "bc98e82c-bc6e-47f1-a848-2cc1a73bcc27"
+  }, {
+    "condition": "$session.params.pesel_verified = true AND $session.params.next_route = \"new-booking\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Booking-New-Main",
+    "name": "f8951b8a-f56f-441e-96ba-c75a9a50e87f"
+  }, {
+    "condition": "$session.params.next_route = \"re-schedule\" AND $session.params.pesel_verified = true",
+    "triggerFulfillment": {
+      "returnPartialResponses": true
+    },
+    "targetPage": "Re-Schedule-Main",
+    "name": "61eb370c-0205-4621-9ca3-9ccae1ba9540"
+  }, {
+    "condition": "($session.params.pesel_verified = false OR $session.params.pesel_verified = null) AND $session.params.pesel_last_5 != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "We couldn't find any matching information for the PESEL ending with  $intent.params.pesel_last_5 . " ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Nie możemy znaleźć danych dla końcówki pesela: $session.params.pesel_last_5_input . " ]
+        },
+        "languageCode": "pl"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "pesel_last_5",
+        "value": null
+      }, {
+        "parameter": "pesel_last_5_input",
+        "value": null
+      } ],
+      "returnPartialResponses": true
+    },
+    "name": "cda71d34-9249-4e76-8427-1d488ccf32ec"
+  }, {
+    "condition": "$session.params.pesel_last_5_count \u003e 4",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, We cannot able to verify you. Please try later." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything-Else",
+    "name": "d9a73b5e-31c5-47f8-bd47-e3e9675bf5e3"
+  } ]
+}

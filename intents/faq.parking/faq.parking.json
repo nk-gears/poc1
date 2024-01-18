@@ -1,0 +1,10 @@
+{
+  "name": "bc5a9257-3bd0-46e2-93b7-f0cdaf9e7595",
+  "displayName": "faq.parking",
+  "parameters": [ {
+    "id": "location",
+    "entityType": "@sys.location"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

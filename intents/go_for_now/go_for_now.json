@@ -1,0 +1,10 @@
+{
+  "name": "e247f516-1352-4cdb-a876-5e335fc11fb5",
+  "displayName": "go_for_now",
+  "parameters": [ {
+    "id": "date-time",
+    "entityType": "@sys.date-time"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

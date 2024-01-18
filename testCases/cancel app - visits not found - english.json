@@ -1,0 +1,187 @@
+{
+  "name": "8f248ddf-1e05-4c3a-8580-3760e08857a1",
+  "displayName": "cancel app - visits not found - english",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "  Hello, Welcome to a private endocrinology clinic, I am your virtual assistant.\n" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "  How can i assist you today ?\n" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "  You can ask about your appointment, book a new appointment,  re-schedule your appointment or cancel appointment" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "cancel appointment"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "next": "my-bookings",
+        "next_route": "cancel",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.cancel"
+      },
+      "currentPage": {
+        "name": "Collect-Pesel-5",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You'r Number is already registered with us. " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Please provide your last 5 digit pesel number" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "02690"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "appointment_count": 0,
+        "appointment_next_count": -1,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "has_appointments": false,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "next": "my-bookings",
+        "next_index": 1,
+        "next_route": "cancel",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_count": 1,
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Cancel-Confirm",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sure, Let me check your upcoming appointments" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "You have no appointments to cancel" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1639292937,
+    "nanos": 982892000
+  }
+}

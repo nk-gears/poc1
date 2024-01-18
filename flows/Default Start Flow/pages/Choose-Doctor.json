@@ -1,0 +1,155 @@
+{
+  "name": "0ecd1c1a-9bac-4611-a7d6-5c583c4f4162",
+  "displayName": "Choose-Doctor",
+  "form": {
+    "parameters": [ {
+      "displayName": "doctor_selected",
+      "required": true,
+      "entityType": "@doctor-name",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Podaj proszę nazwisko doktora albo wybierz na klawiaturze telefonu jego numer i naciśnij krzyżyk" ]
+            },
+            "languageCode": "pl"
+          }, {
+            "text": {
+              "text": [ "W każdej chwili możesz zmienić lekarza mówiąc \"zmień lekarza\"" ]
+            },
+            "languageCode": "pl"
+          }, {
+            "text": {
+              "text": [ "Please tell us the doctor name or enter the corresponding number followed by Hash." ]
+            },
+            "languageCode": "en"
+          }, {
+            "text": {
+              "text": [ "You can always  change  by saying \"Change Doctor\"" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 2,
+          "finishDigit": "#",
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mamy następujących lekarzy specjalizacji  \"$session.params.doctor_avail_category\" \n" ]
+      },
+      "languageCode": "pl"
+    }, {
+      "text": {
+        "text": [ "$session.params.doctor_avail_list" ]
+      },
+      "languageCode": "pl"
+    }, {
+      "text": {
+        "text": [ "We have the following doctors for category $session.params.doctor_avail_category" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "$session.params.doctor_avail_list" ]
+      },
+      "languageCode": "en"
+    } ],
+    "returnPartialResponses": true
+  },
+  "transitionRoutes": [ {
+    "intent": "doctor.change-specialist",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "doctor_avail_category",
+        "value": null
+      }, {
+        "parameter": "avail_doctor_count",
+        "value": null
+      } ]
+    },
+    "targetPage": "Show-Specialist-Categories",
+    "name": "78d2c177-f123-4e5a-9baf-b90811097c3b"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Specjalista, którego wybrałeś to: Doktor $session.params.doctor_selected " ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "You have selected $session.params.doctor_selected" ]
+        },
+        "languageCode": "en"
+      } ],
+      "webhook": "Gabinet Webhook",
+      "tag": "doctor-slot-default",
+      "setParameterActions": [ {
+        "parameter": "is_change_doctor",
+        "value": null
+      }, {
+        "parameter": "slot_refreshed",
+        "value": true
+      } ],
+      "returnPartialResponses": true
+    },
+    "name": "1eab74ac-9ba0-4a9c-bf7e-c32e625e51b3"
+  }, {
+    "condition": "$session.params.avail_default_slots_count \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Zazwyczaj przyjmuje\n\n$session.params.doc_info.timeframe" ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "Doctor $session.params.doctor_selected is specialized  in\n\n$session.params.doc_info.specialists and usually available on $session.params.doc_info.timeframe" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "The next immediate available slot with Doctor $session.params.doctor_selected  is " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "is_slot_shown",
+        "value": false
+      } ],
+      "returnPartialResponses": true
+    },
+    "targetPage": "Show-Slots",
+    "name": "6033f779-0f84-422f-bf21-9854f151f5a1"
+  }, {
+    "condition": "$session.params.avail_default_slots_count = 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Niestety nie znaleźliśmy żadnego wolnego terminu dla wybranego lekarza." ]
+        },
+        "languageCode": "pl"
+      }, {
+        "text": {
+          "text": [ "We couldn't find any slots for the selected doctor  " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "doctor_selected",
+        "value": null
+      } ]
+    },
+    "name": "1bf0ad5b-edc2-43b5-b818-d713b4aa4c46"
+  } ]
+}

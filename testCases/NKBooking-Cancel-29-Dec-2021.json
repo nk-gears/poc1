@@ -1,0 +1,910 @@
+{
+  "name": "408bdbab-4968-4d9e-820b-760233dc7e1d",
+  "tags": [ "#booking" ],
+  "displayName": "NKBooking-Cancel-29-Dec-2021",
+  "notes": "Tested \nBooking\nCancel Appointment",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "5 0 1 7 1 8 3 6 0",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "patient_id": "7920",
+        "pesel": "35061003321",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "  Hello, Welcome to a private endocrinology clinic, I am your virtual assistant.\n" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "  How can i assist you today ?\n" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "  You can ask about your appointment, book a new appointment,  re-schedule your appointment or cancel appointment" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "new appointment"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "5 0 1 7 1 8 3 6 0",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "7920",
+        "pesel": "35061003321",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.new"
+      },
+      "currentPage": {
+        "name": "Show-Specialist-Categories",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sure, I need some information for a new appointment" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "We have the following specialists in our clinic " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Pediatric Endocrinologist, Diabetologist, Urology, Surgeon, Internal Medicine Specialist, Endocrinologist, Nuclear Medicine Specialist, Gynaecologist, Surgery" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Please tell us which specialist you want to meet ?" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "You can always switch category by saying \"Change Category\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Urology"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "avail_doctor_count": 2,
+        "called_number": "Nirmal",
+        "caller_id_voice": "5 0 1 7 1 8 3 6 0",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "doctor_avail_category": "Urology",
+        "doctor_avail_list": "Doctor Aleksander Biały - 2\n--\nDoctor Przemysław Otlewski - 10",
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "7920",
+        "pesel": "35061003321",
+        "pesel_valid": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "One moment. Checking doctors for Urology" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "We have the following doctors for category Urology" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Doctor Aleksander Biały - 2\n--\nDoctor Przemysław Otlewski - 10" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Please tell us the doctor name or enter the corresponding number followed by Hash." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "You can always  change  by saying \"Change Doctor\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "2"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "avail_default_slots_count": 6,
+        "avail_doctor_count": 2,
+        "called_number": "Nirmal",
+        "caller_id_voice": "5 0 1 7 1 8 3 6 0",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "doc_info": {
+          "courtesy": "Mr",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_f": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksander Biały",
+          "lastname": "Biały",
+          "lastname_f": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urology", "Surgeon" ],
+          "timeframe": "Saturday 10:00 - 15:00",
+          "title": "Doctor"
+        },
+        "doctor_avail_category": "Urology",
+        "doctor_avail_list": "Doctor Aleksander Biały - 2\n--\nDoctor Przemysław Otlewski - 10",
+        "doctor_selected": "Aleksander Biały",
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "is_slot_shown": 1,
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "7920",
+        "pesel": "35061003321",
+        "pesel_valid": true,
+        "slot_detail": {
+          "next_dates": [ "2022-01-08", "2022-01-13", "2022-01-15", "2022-01-20", "2022-01-22", "2022-01-27", "2022-01-29", "2022-02-03", "2022-02-05", "2022-02-10", "2022-02-12", "2022-02-17", "2022-02-19", "2022-02-24", "2022-02-26" ],
+          "next_dates_formatted": [ "8th January", "13th January", "15th January", "20th January", "22nd January", "27th January", "29th January", "3rd February", "5th February", "10th February", "12th February", "17th February", "19th February", "24th February", "26th February" ],
+          "slot_date": "2022-01-08",
+          "slot_date_formatted": "8th January",
+          "time_slots": [ "16:00", "16:30", "17:00", "17:30", "18:00", "18:30" ],
+          "time_slots_end": [ "16:30", "17:00", "17:30", "18:00", "18:30", "19:00" ],
+          "time_slots_f": [ "16:00", "16:30", "17:00", "17:30", "18:00", "18:30" ]
+        },
+        "slot_refreshed": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Show-Slots",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You have selected Aleksander Biały" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Doctor Aleksander Biały is specialized  in\n\nUrology, Surgeon and usually available on Saturday 10:00 - 15:00" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "The next immediate available slot with Doctor Aleksander Biały  is " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "On 8th January, we have 6 slots at, \n" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "16:00, 16:30, 17:00, 17:30, 18:00, 18:30" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Please let us know which slot you want ? " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "If you want slot for other dates please say \"next dates\"" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "To choose a different doctor, say \"change doctor\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "16:30"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "avail_default_slots_count": 6,
+        "avail_doctor_count": 2,
+        "called_number": "Nirmal",
+        "caller_id_voice": "5 0 1 7 1 8 3 6 0",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "doc_info": {
+          "courtesy": "Mr",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_f": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksander Biały",
+          "lastname": "Biały",
+          "lastname_f": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urology", "Surgeon" ],
+          "timeframe": "Saturday 10:00 - 15:00",
+          "title": "Doctor"
+        },
+        "doc_slots_shown": true,
+        "doctor_avail_category": "Urology",
+        "doctor_avail_list": "Doctor Aleksander Biały - 2\n--\nDoctor Przemysław Otlewski - 10",
+        "doctor_selected": "Aleksander Biały",
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "is_slot_shown": 1,
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "patient_id": "7920",
+        "pesel": "35061003321",
+        "pesel_valid": true,
+        "slot_detail": {
+          "next_dates": [ "2022-01-08", "2022-01-13", "2022-01-15", "2022-01-20", "2022-01-22", "2022-01-27", "2022-01-29", "2022-02-03", "2022-02-05", "2022-02-10", "2022-02-12", "2022-02-17", "2022-02-19", "2022-02-24", "2022-02-26" ],
+          "next_dates_formatted": [ "8th January", "13th January", "15th January", "20th January", "22nd January", "27th January", "29th January", "3rd February", "5th February", "10th February", "12th February", "17th February", "19th February", "24th February", "26th February" ],
+          "slot_date": "2022-01-08",
+          "slot_date_formatted": "8th January",
+          "time_slots": [ "16:00", "16:30", "17:00", "17:30", "18:00", "18:30" ],
+          "time_slots_end": [ "16:30", "17:00", "17:30", "18:00", "18:30", "19:00" ],
+          "time_slots_f": [ "16:00", "16:30", "17:00", "17:30", "18:00", "18:30" ]
+        },
+        "slot_refreshed": true,
+        "slot_time": {
+          "hours": 16,
+          "minutes": 30,
+          "nanos": 0,
+          "seconds": 0
+        },
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "doctor.slot.selection"
+      },
+      "currentPage": {
+        "name": "Show-Slots",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You have selected 16:30 slot on 8th January" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Is this right ?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "actual_slot_selected": "16:30",
+        "avail_default_slots_count": 6,
+        "avail_doctor_count": 2,
+        "booking_slot_selected": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "5 0 1 7 1 8 3 6 0",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "doc_info": {
+          "courtesy": "Mr",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_f": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksander Biały",
+          "lastname": "Biały",
+          "lastname_f": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urology", "Surgeon" ],
+          "timeframe": "Saturday 10:00 - 15:00",
+          "title": "Doctor"
+        },
+        "doc_slots_shown": true,
+        "doctor_avail_category": "Urology",
+        "doctor_avail_list": "Doctor Aleksander Biały - 2\n--\nDoctor Przemysław Otlewski - 10",
+        "doctor_selected": "Aleksander Biały",
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "is_slot_shown": 1,
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "7920",
+        "pesel": "35061003321",
+        "pesel_valid": true,
+        "slot_detail": {
+          "next_dates": [ "2022-01-08", "2022-01-13", "2022-01-15", "2022-01-20", "2022-01-22", "2022-01-27", "2022-01-29", "2022-02-03", "2022-02-05", "2022-02-10", "2022-02-12", "2022-02-17", "2022-02-19", "2022-02-24", "2022-02-26" ],
+          "next_dates_formatted": [ "8th January", "13th January", "15th January", "20th January", "22nd January", "27th January", "29th January", "3rd February", "5th February", "10th February", "12th February", "17th February", "19th February", "24th February", "26th February" ],
+          "slot_date": "2022-01-08",
+          "slot_date_formatted": "8th January",
+          "time_slots": [ "16:00", "16:30", "17:00", "17:30", "18:00", "18:30" ],
+          "time_slots_end": [ "16:30", "17:00", "17:30", "18:00", "18:30", "19:00" ],
+          "time_slots_f": [ "16:00", "16:30", "17:00", "17:30", "18:00", "18:30" ]
+        },
+        "slot_refreshed": true,
+        "slot_selected": true,
+        "slot_selected_valid": true,
+        "slot_time": {
+          "hours": 16,
+          "minutes": 30,
+          "nanos": 0,
+          "seconds": 0
+        },
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect-Pesel-5",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You'r Number is already registered with us. " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Please provide your last 5 digit pesel number" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "03321"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "5 0 1 7 1 8 3 6 0",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "doc_info": {
+          "courtesy": "Mr",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_f": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksander Biały",
+          "lastname": "Biały",
+          "lastname_f": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urology", "Surgeon" ],
+          "timeframe": "Saturday 10:00 - 15:00",
+          "title": "Doctor"
+        },
+        "doc_slots_shown": true,
+        "event_ended": true,
+        "event_meta_last": {
+          "booking_info": {
+            "doc_info": {
+              "courtesy": "Mr",
+              "doctorId": "26810976141575321",
+              "dtmf_number": "2",
+              "firstname": "Aleksander",
+              "firstname_f": "Aleksander",
+              "fullName": "Aleksander Biały",
+              "fullName_f": "Aleksander Biały",
+              "lastname": "Biały",
+              "lastname_f": "Biały",
+              "row_id": "2",
+              "specialists": [ "Urology", "Surgeon" ],
+              "timeframe": "Saturday 10:00 - 15:00",
+              "title": "Doctor"
+            },
+            "reference_id": "36793",
+            "status": true
+          }
+        },
+        "matchedUser": {
+          "address": "al. Kasztanowa 3/2",
+          "brith_year": "1935",
+          "city": "Wrocław",
+          "comments": null,
+          "contact": "501718360",
+          "document": "null",
+          "email": "yatzeck@gmmail.com",
+          "gender": "K",
+          "name": "Teresa",
+          "nfz": "1",
+          "nip": "",
+          "pcj_dom": "3",
+          "pcj_id": "7920",
+          "pcj_kraj": "",
+          "pcj_mieszkanie": "2",
+          "pcj_okreslenie": "al.",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Kasztanowa",
+          "pcj_wojewodztwo": "",
+          "pesel": "35061003321",
+          "phone": "501718360",
+          "surname": "Kiełczewska",
+          "teryt_simc_sym": "0264039",
+          "zip_code": "53-125"
+        },
+        "next": "my-bookings",
+        "patient_id": "7920",
+        "pesel": "35061003321",
+        "pesel_last_5": "03321",
+        "pesel_last_5_input": "03321",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Anything-Else",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Your booking for Biały on 8th January , 16:30 has been successfully done, we have sent you the sms with confirmation of that visit. \n" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Your Booking Reference Number is : 36793" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Thank You" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Is there anything else we could help you ?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "cancel appointment"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "appointment_count": 1,
+        "appointment_detail": {
+          "appointmentDate": "2022-01-08",
+          "appointmentDateFormatted": "Saturday 08 January",
+          "appointmentTime": "16:30:00",
+          "booking_id": "36793",
+          "doctorInfo": {
+            "courtesy": "Mr",
+            "doctorId": "26810976141575321",
+            "dtmf_number": "2",
+            "firstname": "Aleksander",
+            "firstname_f": "Aleksander",
+            "fullName": "Aleksander Biały",
+            "fullName_f": "Aleksander Biały",
+            "lastname": "Biały",
+            "lastname_f": "Biały",
+            "row_id": "2",
+            "specialists": [ "Urology", "Surgeon" ],
+            "timeframe": "Saturday 10:00 - 15:00",
+            "title": "Doctor"
+          },
+          "doctorName": "Aleksander Biały"
+        },
+        "appointment_next_count": 0,
+        "called_number": "Nirmal",
+        "caller_id_voice": "5 0 1 7 1 8 3 6 0",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Mr",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_f": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksander Biały",
+          "lastname": "Biały",
+          "lastname_f": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urology", "Surgeon" ],
+          "timeframe": "Saturday 10:00 - 15:00",
+          "title": "Doctor"
+        },
+        "doc_slots_shown": true,
+        "event_ended": true,
+        "event_meta_last": {
+          "appointment_detail": {
+            "appointmentDate": "2022-01-08",
+            "appointmentDateFormatted": "Saturday 08 January",
+            "appointmentTime": "16:30:00",
+            "booking_id": "36793",
+            "doctorInfo": {
+              "courtesy": "Mr",
+              "doctorId": "26810976141575321",
+              "dtmf_number": "2",
+              "firstname": "Aleksander",
+              "firstname_f": "Aleksander",
+              "fullName": "Aleksander Biały",
+              "fullName_f": "Aleksander Biały",
+              "lastname": "Biały",
+              "lastname_f": "Biały",
+              "row_id": "2",
+              "specialists": [ "Urology", "Surgeon" ],
+              "timeframe": "Saturday 10:00 - 15:00",
+              "title": "Doctor"
+            },
+            "doctorName": "Aleksander Biały"
+          },
+          "from_appointments": true
+        },
+        "has_appointments": true,
+        "matchedUser": {
+          "address": "al. Kasztanowa 3/2",
+          "brith_year": "1935",
+          "city": "Wrocław",
+          "comments": null,
+          "contact": "501718360",
+          "document": "null",
+          "email": "yatzeck@gmmail.com",
+          "gender": "K",
+          "name": "Teresa",
+          "nfz": "1",
+          "nip": "",
+          "pcj_dom": "3",
+          "pcj_id": "7920",
+          "pcj_kraj": "",
+          "pcj_mieszkanie": "2",
+          "pcj_okreslenie": "al.",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Kasztanowa",
+          "pcj_wojewodztwo": "",
+          "pesel": "35061003321",
+          "phone": "501718360",
+          "surname": "Kiełczewska",
+          "teryt_simc_sym": "0264039",
+          "zip_code": "53-125"
+        },
+        "next": "my-bookings",
+        "next_index": 1,
+        "next_route": "cancel",
+        "patient_id": "7920",
+        "pesel": "35061003321",
+        "pesel_last_5": "03321",
+        "pesel_last_5_input": "03321",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.cancel"
+      },
+      "currentPage": {
+        "name": "Cancel-Confirm",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sure, Let me check your upcoming appointments" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "You have an appointment with Doctor Aleksander Biały on Saturday 08 January at  16:30:00 " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Do you wish to cancel this appointment ?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "booking_cancelled": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "5 0 1 7 1 8 3 6 0",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Mr",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_f": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksander Biały",
+          "lastname": "Biały",
+          "lastname_f": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urology", "Surgeon" ],
+          "timeframe": "Saturday 10:00 - 15:00",
+          "title": "Doctor"
+        },
+        "doc_slots_shown": true,
+        "event_ended": true,
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "matchedUser": {
+          "address": "al. Kasztanowa 3/2",
+          "brith_year": "1935",
+          "city": "Wrocław",
+          "comments": null,
+          "contact": "501718360",
+          "document": "null",
+          "email": "yatzeck@gmmail.com",
+          "gender": "K",
+          "name": "Teresa",
+          "nfz": "1",
+          "nip": "",
+          "pcj_dom": "3",
+          "pcj_id": "7920",
+          "pcj_kraj": "",
+          "pcj_mieszkanie": "2",
+          "pcj_okreslenie": "al.",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Kasztanowa",
+          "pcj_wojewodztwo": "",
+          "pesel": "35061003321",
+          "phone": "501718360",
+          "surname": "Kiełczewska",
+          "teryt_simc_sym": "0264039",
+          "zip_code": "53-125"
+        },
+        "next": "my-bookings",
+        "patient_id": "7920",
+        "pesel": "35061003321",
+        "pesel_last_5": "03321",
+        "pesel_last_5_input": "03321",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything-Else",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Your booking  with Doctor Aleksander Biały on Saturday 08 January at  16:30:00  has been cancelled." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Is there anything else we could help you ?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "booking_cancelled": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "5 0 1 7 1 8 3 6 0",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Mr",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_f": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksander Biały",
+          "lastname": "Biały",
+          "lastname_f": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urology", "Surgeon" ],
+          "timeframe": "Saturday 10:00 - 15:00",
+          "title": "Doctor"
+        },
+        "doc_slots_shown": true,
+        "event_ended": true,
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "matchedUser": {
+          "address": "al. Kasztanowa 3/2",
+          "brith_year": "1935",
+          "city": "Wrocław",
+          "comments": null,
+          "contact": "501718360",
+          "document": "null",
+          "email": "yatzeck@gmmail.com",
+          "gender": "K",
+          "name": "Teresa",
+          "nfz": "1",
+          "nip": "",
+          "pcj_dom": "3",
+          "pcj_id": "7920",
+          "pcj_kraj": "",
+          "pcj_mieszkanie": "2",
+          "pcj_okreslenie": "al.",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Kasztanowa",
+          "pcj_wojewodztwo": "",
+          "pesel": "35061003321",
+          "phone": "501718360",
+          "surname": "Kiełczewska",
+          "teryt_simc_sym": "0264039",
+          "zip_code": "53-125"
+        },
+        "next": "my-bookings",
+        "patient_id": "7920",
+        "pesel": "35061003321",
+        "pesel_last_5": "03321",
+        "pesel_last_5_input": "03321",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.goodbye"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for contacting virtual assistant. Have a great day." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1640789199,
+    "nanos": 511863000
+  }
+}

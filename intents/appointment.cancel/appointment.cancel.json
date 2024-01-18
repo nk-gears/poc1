@@ -1,0 +1,7 @@
+{
+  "name": "c0b04a1e-f829-482e-a6fc-4ccf77af1742",
+  "displayName": "appointment.cancel",
+  "priority": 500000,
+  "description": "Cancel an Appointment",
+  "numTrainingPhrases": 14
+}

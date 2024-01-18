@@ -1,0 +1,213 @@
+{
+  "name": "401dd9de-ebe4-466c-856d-0ef49f24453a",
+  "displayName": "single slot problem - suspends",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "valid_phone": false
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "  Hello, Welcome to a private endocrinology clinic, I am your virtual assistant.\n" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "  How can i assist you today ?\n" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "  You can ask about your appointment, book a new appointment,  re-schedule your appointment or cancel appointment" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "new booking"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "valid_phone": false
+      },
+      "triggeredIntent": {
+        "name": "appointment.new"
+      },
+      "currentPage": {
+        "name": "Show-Specialist-Categories",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sure, I need some information for a new appointment" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "We have the following specialists in our clinic " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Pediatric Endocrinologist, Diabetologist, Urology, Surgeon, Internal Medicine Specialist, Endocrinologist, Nuclear Medicine Specialist, Gynaecologist, Surgery" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Please tell us which specialist you want to meet ?" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "You can always switch category by saying \"Change Category\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "endocrinologist"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "avail_doctor_count": 6,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "doctor_avail_category": "Endocrinologist",
+        "doctor_avail_list": "Doctor Małgorzata Kiełczewska - 4\n--\nDoctor Piotr Janczak - 5\n--\nDoctor Katarzyna Krępuła - 6\n--\nDoctor Beata Wikiera - 7\n--\nDoctor Anna Otlewska - 8\n--\nDoctor Irena Maruk - 9",
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "valid_phone": false
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "One moment. Checking doctors for Endocrinologist" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "We have the following doctors for category Endocrinologist" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Doctor Małgorzata Kiełczewska - 4\n--\nDoctor Piotr Janczak - 5\n--\nDoctor Katarzyna Krępuła - 6\n--\nDoctor Beata Wikiera - 7\n--\nDoctor Anna Otlewska - 8\n--\nDoctor Irena Maruk - 9" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Please tell us the doctor name or enter the corresponding number followed by Hash." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "You can always  change  by saying \"Change Doctor\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "4"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "avail_doctor_count": 6,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "doctor_avail_category": "Endocrinologist",
+        "doctor_avail_list": "Doctor Małgorzata Kiełczewska - 4\n--\nDoctor Piotr Janczak - 5\n--\nDoctor Katarzyna Krępuła - 6\n--\nDoctor Beata Wikiera - 7\n--\nDoctor Anna Otlewska - 8\n--\nDoctor Irena Maruk - 9",
+        "doctor_selected": "Małgorzata Kiełczewska",
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "need_doctor_selection": true,
+        "next_route": "new-booking",
+        "slot_refreshed": true,
+        "specialist_list": [ "Pediatric Endocrinologist", "Diabetologist", "Urology", "Surgeon", "Internal Medicine Specialist", "Endocrinologist", "Nuclear Medicine Specialist", "Gynaecologist", "Surgery" ],
+        "valid_phone": false
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You have selected Małgorzata Kiełczewska" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1640198440,
+    "nanos": 191401000
+  },
+  "testConfig": {
+    "trackingParameters": [ "single slot" ]
+  }
+}

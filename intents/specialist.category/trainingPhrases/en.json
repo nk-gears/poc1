@@ -1,0 +1,15 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "What medical specialist you have ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What specialist you have ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

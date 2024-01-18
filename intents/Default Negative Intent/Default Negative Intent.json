@@ -1,6 +1,11 @@
 {
   "name": "00000000-0000-0000-0000-000000000001",
   "displayName": "Default Negative Intent",
+  "parameters": [ {
+    "id": "visit_type-nfz",
+    "entityType": "@visit_type-nfz"
+  } ],
   "priority": 500000,
-  "isFallback": true
+  "isFallback": true,
+  "numTrainingPhrases": 8
 }

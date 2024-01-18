@@ -1,0 +1,88 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "proszę spróbować znaleźć termin u innego ",
+      "auto": true
+    }, {
+      "text": "doktora",
+      "parameterId": "person",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "proszę mnie umówić do innego ",
+      "auto": true
+    }, {
+      "text": "doktora",
+      "parameterId": "person",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "zmieniam lekarza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "proszę zmienić lekarza",
+      "auto": true
+    } ],
+    "repeatCount": 3,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "do innego poproszę",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "mogę zmienić lekarza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "może",
+      "parameterId": "last-name",
+      "auto": true
+    }, {
+      "text": " być ",
+      "auto": true
+    }, {
+      "text": "inny",
+      "parameterId": "last-name1",
+      "auto": true
+    }, {
+      "text": " doktor",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "poproszę do innego ",
+      "auto": true
+    }, {
+      "text": "doktora",
+      "parameterId": "person",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "inny lekarz"
+    } ],
+    "repeatCount": 5,
+    "languageCode": "pl"
+  } ]
+}

@@ -1,129 +1,113 @@
 {
   "trainingPhrases": [ {
-    "id": "e9e263a6-ec65-4747-a32f-c82aa59e0d48",
+    "id": "f7baa66d-298b-40f1-a83b-f22c0ac2054a",
     "parts": [ {
-      "text": "just going to say hi",
-      "auto": true
+      "text": "just going to say hi"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "153b05d0-5f8d-44cd-b987-939eb02a6093",
+    "id": "54a71cf3-84b0-41c5-bc40-c720fe830def",
     "parts": [ {
-      "text": "heya",
-      "auto": true
+      "text": "heya"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "d80e6422-b16b-4011-b50b-e5c6ebff4aaa",
+    "id": "861876e9-e98d-456b-ad3a-e309a2e30c42",
     "parts": [ {
-      "text": "hello hi",
-      "auto": true
+      "text": "hello hi"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "1d6deb0e-1fd8-4219-8417-513382af86b1",
+    "id": "5da28060-9088-4a62-b4a5-2ca28722aac0",
     "parts": [ {
-      "text": "howdy",
-      "auto": true
+      "text": "howdy"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "0f648e26-6112-458a-b637-edd3622e6bbf",
+    "id": "b7f048a7-b21d-4e67-bd69-1d5fd6bcb507",
     "parts": [ {
-      "text": "hey there",
-      "auto": true
+      "text": "hey there"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "b4d72ee4-0249-4f5b-bd38-759f93cd6c21",
+    "id": "8907878b-f65d-4eac-83bb-7ed42d87c8de",
     "parts": [ {
-      "text": "hi there",
-      "auto": true
+      "text": "hi there"
     } ],
     "repeatCount": 2,
     "languageCode": "en"
   }, {
-    "id": "2afab333-2100-46fe-9f54-32b9732c1f25",
+    "id": "413211ae-c01d-4d24-9cec-95a046d4a6cc",
     "parts": [ {
-      "text": "greetings",
-      "auto": true
+      "text": "greetings"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "4ce88b09-268b-450e-a158-7ffb2e79d6b0",
+    "id": "834d4066-d807-4473-8efb-d6dd01d7c2c8",
     "parts": [ {
-      "text": "hey",
-      "auto": true
+      "text": "hey"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "ed1e0ac2-ab7c-46a9-a42c-9c65002ec7e6",
+    "id": "60aa1987-9fb7-4426-af15-81fe368dd35c",
     "parts": [ {
-      "text": "long time no see",
-      "auto": true
+      "text": "long time no see"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "3792a094-9d58-4362-ac6f-23ffd4df9272",
+    "id": "1583fd20-66df-4546-958d-625e773effcb",
     "parts": [ {
-      "text": "hello",
-      "auto": true
+      "text": "hello"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "0f81ac1e-43d0-405e-b992-bc69034a583a",
+    "id": "f09cfb53-8ef8-45f1-b2a0-97caa51ade06",
     "parts": [ {
-      "text": "lovely day isn't it",
-      "auto": true
+      "text": "lovely day isn't it"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "4230590d-fce1-499d-903b-b77407e42726",
+    "id": "0f16d1e7-1387-4329-b23e-4d1f00ff5dad",
     "parts": [ {
-      "text": "I greet you",
-      "auto": true
+      "text": "I greet you"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "8da21144-32cc-4013-899c-0b5268d30183",
+    "id": "bc43d865-b440-49d3-97a3-2f1c2b279a9b",
     "parts": [ {
-      "text": "hello again",
-      "auto": true
+      "text": "hello again"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "2e133b08-8c95-4e06-af92-8b272c3b78fa",
+    "id": "c3b46d53-d3c9-45e1-be24-a669f860287c",
     "parts": [ {
-      "text": "hi",
-      "auto": true
+      "text": "hi"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "2b59c49c-ef79-421c-b92d-459016375bf5",
+    "id": "9596ac7f-2ad5-45aa-8ff1-ec229ca65f69",
     "parts": [ {
-      "text": "hello there",
-      "auto": true
+      "text": "hello there"
     } ],
     "repeatCount": 1,
     "languageCode": "en"
   }, {
-    "id": "db500082-099f-4376-a972-e926cf1d12e7",
+    "id": "d7afed8e-c8b2-4a83-8e6f-3d912a64aa95",
     "parts": [ {
-      "text": "a good day",
-      "auto": true
+      "text": "a good day"
     } ],
     "repeatCount": 1,
     "languageCode": "en"

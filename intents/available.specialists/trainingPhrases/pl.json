@@ -1,0 +1,26 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Jacy specjaliści pracują u was?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Czy macie "
+    }, {
+      "text": "endokrynologa",
+      "parameterId": "doctor-category"
+    }, {
+      "text": " ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  }, {
+    "parts": [ {
+      "text": "Jacy specjaliści są dostępni  w waszej przychodni?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "pl"
+  } ]
+}

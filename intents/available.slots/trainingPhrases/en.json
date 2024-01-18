@@ -1,0 +1,72 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "What is "
+    }, {
+      "text": "Samuel"
+    }, {
+      "text": " next availability"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "what is doctor "
+    }, {
+      "text": "Samuel"
+    }, {
+      "text": " next availability"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "when does the endocrinologist available "
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "When does the doctor available "
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "what's the doctors availability "
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What are the nearest timeslots "
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What are the closest appointments to "
+    }, {
+      "text": "Samuel"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What are the closest appointments to doctor "
+    }, {
+      "text": "Samuel"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What are the closest appointments to the "
+    }, {
+      "text": "endocrinologist",
+      "parameterId": "doctor-category"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

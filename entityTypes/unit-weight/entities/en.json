@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "kg",
+    "synonyms": [ "kg", "kilogram" ],
+    "languageCode": "en"
+  }, {
+    "value": "lb",
+    "synonyms": [ "lb", "pounds" ],
+    "languageCode": "en"
+  } ]
+}

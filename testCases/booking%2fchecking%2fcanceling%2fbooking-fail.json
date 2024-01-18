@@ -1,0 +1,1960 @@
+{
+  "name": "f4386d0a-7f02-4cc6-825b-3e8c80214c02",
+  "displayName": "booking/checking/canceling/booking-fail",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "cześć"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Witam w prywatnej przychodni endokrynologicznej, na Alei Kasztanowej 3. Pomogę ci zarezerwować wizytę, przenieść termin wizyty, odwołać wizytę lub sprawdzić na kiedy masz zaplanowane wizyty w naszej przychodni. Powiedz proszę, którą z tych rzeczy chciałbyś zrobić? Na przykład: \"chciałbym umówić wizytę\", \"chcę odwołać wizytę\", \"chcę zmienić termin mojej wizyty\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "chciałbym sprawdzić mokje wizyty"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "invalid_pesel": 0,
+          "next_apt": 0,
+          "next_date": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "next": "my-bookings",
+        "next_route": "my-bookings",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_valid": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "my.appointment.enquiry"
+      },
+      "currentPage": {
+        "name": "Collect-Pesel-5",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Dzwoniłeś już do nas z tego numeru telefonu" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Podaj proszę cyfra po cyfrze 5 ostatnich cyfr swojego numeru pesel. " ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "02690"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "next": "my-bookings",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Anything-Else",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Dziękuję! Zostałeś poprawnie zweryfikowany!" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Nie masz zaplanowanych wizyt w naszej przychodni" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "W czym jeszcze możemy ci pomóc?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "chciałbym umówić sie na wizytę"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.new"
+      },
+      "currentPage": {
+        "name": "Show-Specialist-Categories",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Oczywiście! Wybierz proszę  lekarza do którego chciałbyś się umówić. Zaczniemy od wybrania specjalizacji." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Mamy  następujących specjalistów w naszej przychodni" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Endokrynolog dziecięcy, Urolog, Endokrynolog, Endokrynolog-Ginekolog" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Do którego specjalisty chcesz się umowić" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "do urologa"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_doctor_count": 2,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doctor_avail_category": "Urolog",
+        "doctor_avail_list": "doktora Pana Aleksandra Białego - 2\n--\ndoktora Pana Przemysław Otlewskiego - 10",
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Chwileczkę, szukam dla ciebie lekarza tej specjalizacji" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Mamy następujących lekarzy specjalizacji Urolog" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "doktora Pana Aleksandra Białego - 2\n--\ndoktora Pana Przemysław Otlewskiego - 10" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Podaj proszę nazwisko doktora albo wybierz na klawiaturze telefonu jego numer i naciśnij krzyżyk" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "W każdej chwili możesz zmienić lekarza mówiąc \"zmień lekarza\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "2"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_default_slots_count": 4,
+        "avail_doctor_count": 2,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "doctor_avail_category": "Urolog",
+        "doctor_avail_list": "doktora Pana Aleksandra Białego - 2\n--\ndoktora Pana Przemysław Otlewskiego - 10",
+        "doctor_selected": "Aleksander Biały",
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "is_slot_shown": 1,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_detail": {
+          "next_dates": [ "2021-11-13", "2021-11-18", "2021-11-20", "2021-11-25", "2021-11-27", "2021-12-02", "2021-12-04", "2021-12-09", "2021-12-11", "2021-12-16", "2021-12-18", "2021-12-23", "2021-12-25", "2021-12-30", "2022-01-01", "2022-01-06", "2022-01-08" ],
+          "next_dates_formatted": [ "trzynastego Listopada", "osiemnastego Listopada", "dwudziestego Listopada", "dwudziestego piątego Listopada", "dwudziestego siódmego Listopada", "drugiego Grudnia", "czwartego Grudnia", "dziewiątego Grudnia", "jedenastego Grudnia", "szesnastego Grudnia", "osiemnastego Grudnia", "dwudziestego trzeciego Grudnia", "dwudziestego piątego Grudnia", "trzydziestego Grudnia", "pierwszego Stycznia", "szóstego Stycznia", "ósmego Stycznia" ],
+          "slot_date": "2021-11-13",
+          "slot_date_formatted": "trzynastego Listopada",
+          "time_slots": [ "17:00", "17:30", "18:00", "18:30" ],
+          "time_slots_end": [ "17:30", "18:00", "18:30", "19:00" ],
+          "time_slots_f": [ "siedemnastej zero zero", "siedemnastej trzydzieści", "osiemnastej zero zero", "osiemnastej trzydzieści" ]
+        },
+        "slot_refreshed": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Show-Slots",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Specjalista, którego wybrałeś to: Doktor Aleksander Biały" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Specjalizacja to: Urolog. Ramowy terminarz wybranego specjalisty to: Sobota od dziesiątej do piętnastej" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Najbliższy termin wizyty to Aleksander Biały  to" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Najbliższy dostępny dzień: trzynastego Listopada. Ilość terminów: 4\n" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "siedemnastej zero zero, siedemnastej trzydzieści, osiemnastej zero zero, osiemnastej trzydzieści" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Wybierz dogodny termin" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Jeśli chcesz umówić wizytę w inny dzień powiedz \"Inny Dzień\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "17:00"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_default_slots_count": 4,
+        "avail_doctor_count": 2,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "doctor_avail_category": "Urolog",
+        "doctor_avail_list": "doktora Pana Aleksandra Białego - 2\n--\ndoktora Pana Przemysław Otlewskiego - 10",
+        "doctor_selected": "Aleksander Biały",
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "is_slot_shown": 1,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_detail": {
+          "next_dates": [ "2021-11-13", "2021-11-18", "2021-11-20", "2021-11-25", "2021-11-27", "2021-12-02", "2021-12-04", "2021-12-09", "2021-12-11", "2021-12-16", "2021-12-18", "2021-12-23", "2021-12-25", "2021-12-30", "2022-01-01", "2022-01-06", "2022-01-08" ],
+          "next_dates_formatted": [ "trzynastego Listopada", "osiemnastego Listopada", "dwudziestego Listopada", "dwudziestego piątego Listopada", "dwudziestego siódmego Listopada", "drugiego Grudnia", "czwartego Grudnia", "dziewiątego Grudnia", "jedenastego Grudnia", "szesnastego Grudnia", "osiemnastego Grudnia", "dwudziestego trzeciego Grudnia", "dwudziestego piątego Grudnia", "trzydziestego Grudnia", "pierwszego Stycznia", "szóstego Stycznia", "ósmego Stycznia" ],
+          "slot_date": "2021-11-13",
+          "slot_date_formatted": "trzynastego Listopada",
+          "time_slots": [ "17:00", "17:30", "18:00", "18:30" ],
+          "time_slots_end": [ "17:30", "18:00", "18:30", "19:00" ],
+          "time_slots_f": [ "siedemnastej zero zero", "siedemnastej trzydzieści", "osiemnastej zero zero", "osiemnastej trzydzieści" ]
+        },
+        "slot_refreshed": false,
+        "slot_time": {
+          "hours": 17,
+          "minutes": 0,
+          "nanos": 0,
+          "seconds": 0
+        },
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "doctor.slot.selection"
+      },
+      "currentPage": {
+        "name": "Show-Slots",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Rejestrujesz się do doktora Aleksandra Białego na godzinę 17:00 w dniu trzynastego Listopada" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "czy potwierdzasz ten wybór?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "tak"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "event_ended": true,
+        "event_meta_last": {
+          "booking_info": {
+            "doc_info": {
+              "courtesy": "Pana",
+              "doctorId": "26810976141575321",
+              "dtmf_number": "2",
+              "firstname": "Aleksander",
+              "firstname_d": "Aleksandrowi",
+              "firstname_e": "Aleksandrem",
+              "firstname_f": "Aleksandra",
+              "firstname_g": "Aleksandra",
+              "firstname_n": "Aleksander",
+              "fullName": "Aleksander Biały",
+              "fullName_f": "Aleksandra Białego",
+              "lastname": "Biały",
+              "lastname_d": "Białemu",
+              "lastname_e": "Białym",
+              "lastname_f": "Białego",
+              "lastname_g": "Białego",
+              "lastname_n": "Biały",
+              "row_id": "2",
+              "specialists": [ "Urolog" ],
+              "timeframe": "Sobota od dziesiątej do piętnastej",
+              "title": "doktora",
+              "title_d": "doktorowi",
+              "title_e": "Doktorem",
+              "title_g": "doktora",
+              "title_n": "doktor"
+            },
+            "reference_id": "34163",
+            "status": true
+          }
+        },
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "next": "my-bookings",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": false,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything-Else",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Rezerwacja została zrobiona. Wysłaliśmy na Twój numer esemesa z potwierdzeniem" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Numer twojej rezerwacji to: 34163" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Dziękujemy" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "W czym jeszcze możemy ci pomóc?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "chciałbym odwołać rejestrację"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "appointment_count": 1,
+        "appointment_detail": {
+          "appointmentDate": "2021-11-13",
+          "appointmentDateFormatted": "trzynastego Listopada",
+          "appointmentTime": "siedemnastej zero zero",
+          "booking_id": "34163",
+          "doctorInfo": {
+            "courtesy": "Pana",
+            "doctorId": "26810976141575321",
+            "dtmf_number": "2",
+            "firstname": "Aleksander",
+            "firstname_d": "Aleksandrowi",
+            "firstname_e": "Aleksandrem",
+            "firstname_f": "Aleksandra",
+            "firstname_g": "Aleksandra",
+            "firstname_n": "Aleksander",
+            "fullName": "Aleksander Biały",
+            "fullName_f": "Aleksandra Białego",
+            "lastname": "Biały",
+            "lastname_d": "Białemu",
+            "lastname_e": "Białym",
+            "lastname_f": "Białego",
+            "lastname_g": "Białego",
+            "lastname_n": "Biały",
+            "row_id": "2",
+            "specialists": [ "Urolog" ],
+            "timeframe": "Sobota od dziesiątej do piętnastej",
+            "title": "doktora",
+            "title_d": "doktorowi",
+            "title_e": "Doktorem",
+            "title_g": "doktora",
+            "title_n": "doktor"
+          },
+          "doctorName": "Aleksander Biały"
+        },
+        "appointment_next_count": 0,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "event_ended": true,
+        "event_meta_last": {
+          "appointment_detail": {
+            "appointmentDate": "2021-11-13",
+            "appointmentDateFormatted": "trzynastego Listopada",
+            "appointmentTime": "siedemnastej zero zero",
+            "booking_id": "34163",
+            "doctorInfo": {
+              "courtesy": "Pana",
+              "doctorId": "26810976141575321",
+              "dtmf_number": "2",
+              "firstname": "Aleksander",
+              "firstname_d": "Aleksandrowi",
+              "firstname_e": "Aleksandrem",
+              "firstname_f": "Aleksandra",
+              "firstname_g": "Aleksandra",
+              "firstname_n": "Aleksander",
+              "fullName": "Aleksander Biały",
+              "fullName_f": "Aleksandra Białego",
+              "lastname": "Biały",
+              "lastname_d": "Białemu",
+              "lastname_e": "Białym",
+              "lastname_f": "Białego",
+              "lastname_g": "Białego",
+              "lastname_n": "Biały",
+              "row_id": "2",
+              "specialists": [ "Urolog" ],
+              "timeframe": "Sobota od dziesiątej do piętnastej",
+              "title": "doktora",
+              "title_d": "doktorowi",
+              "title_e": "Doktorem",
+              "title_g": "doktora",
+              "title_n": "doktor"
+            },
+            "doctorName": "Aleksander Biały"
+          },
+          "from_appointments": true
+        },
+        "has_appointments": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "next": "my-bookings",
+        "next_index": 1,
+        "next_route": "cancel",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": false,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.cancel"
+      },
+      "currentPage": {
+        "name": "Cancel-Confirm",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Pozwól proszę, że sprawdzę na kiedy masz zaplanowane wizyty w naszej przychodni" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Doktor Aleksander Biały miał cię przyjąć w dniu trzynastego Listopada  o godzinie siedemnastej zero zero " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Czy chcesz odwołać tą rezerwację ?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "tak"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "booking_cancelled": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "event_ended": true,
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "next": "my-bookings",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": false,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything-Else",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Odwołujesz rezerwcję do doktora \n\nAleksandra Białego\n\no godzinie siedemnastej zero zero trzynastego Listopada.\n\nData odwoływanej wizyty: trzynastego Listopada. \nGodzina rezerwacji: siedemnastej zero zero." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Rezerwacja została odwołana" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "W czym jeszcze możemy ci pomóc?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "chciałbym umówić rejestrację"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "booking_cancelled": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "event_ended": true,
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": false,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.new"
+      },
+      "currentPage": {
+        "name": "Show-Specialist-Categories",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Oczywiście! Wybierz proszę  lekarza do którego chciałbyś się umówić. Zaczniemy od wybrania specjalizacji." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Mamy  następujących specjalistów w naszej przychodni" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Endokrynolog dziecięcy, Urolog, Endokrynolog, Endokrynolog-Ginekolog" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Do którego specjalisty chcesz się umowić" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "do endokrynologa"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_doctor_count": 5,
+        "booking_cancelled": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "doctor_avail_category": "Endokrynolog",
+        "doctor_avail_list": "doktora Pana Małgorzaty Kiełczewskiej - 4\n--\ndoktora Pana Piotra Janczaka - 5\n--\ndoktora Pana Katarzyny Krępuły - 6\n--\ndoktora Pana Beaty Wikiery - 7\n--\ndoktora Pana Anny Otlewskiej - 8",
+        "event_ended": true,
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": false,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Chwileczkę, szukam dla ciebie lekarza tej specjalizacji" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Mamy następujących lekarzy specjalizacji Endokrynolog" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "doktora Pana Małgorzaty Kiełczewskiej - 4\n--\ndoktora Pana Piotra Janczaka - 5\n--\ndoktora Pana Katarzyny Krępuły - 6\n--\ndoktora Pana Beaty Wikiery - 7\n--\ndoktora Pana Anny Otlewskiej - 8" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Podaj proszę nazwisko doktora albo wybierz na klawiaturze telefonu jego numer i naciśnij krzyżyk" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "W każdej chwili możesz zmienić lekarza mówiąc \"zmień lekarza\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "do pani małgorzaty"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_doctor_count": 5,
+        "booking_cancelled": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "doctor_avail_category": "Endokrynolog",
+        "doctor_avail_list": "doktora Pana Małgorzaty Kiełczewskiej - 4\n--\ndoktora Pana Piotra Janczaka - 5\n--\ndoktora Pana Katarzyny Krępuły - 6\n--\ndoktora Pana Beaty Wikiery - 7\n--\ndoktora Pana Anny Otlewskiej - 8",
+        "event_ended": true,
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": false,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Podaj proszę nazwisko doktora albo wybierz na klawiaturze telefonu jego numer i naciśnij krzyżyk" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "W każdej chwili możesz zmienić lekarza mówiąc \"zmień lekarza\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "kiełczewska"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_doctor_count": 5,
+        "booking_cancelled": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "doctor_avail_category": "Endokrynolog",
+        "doctor_avail_list": "doktora Pana Małgorzaty Kiełczewskiej - 4\n--\ndoktora Pana Piotra Janczaka - 5\n--\ndoktora Pana Katarzyny Krępuły - 6\n--\ndoktora Pana Beaty Wikiery - 7\n--\ndoktora Pana Anny Otlewskiej - 8",
+        "event_ended": true,
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": false,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Podaj proszę nazwisko doktora albo wybierz na klawiaturze telefonu jego numer i naciśnij krzyżyk" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "W każdej chwili możesz zmienić lekarza mówiąc \"zmień lekarza\"" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "do doktor kiełczewskiej"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_doctor_count": 5,
+        "booking_cancelled": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "doctor_avail_category": "Endokrynolog",
+        "doctor_avail_list": "doktora Pana Małgorzaty Kiełczewskiej - 4\n--\ndoktora Pana Piotra Janczaka - 5\n--\ndoktora Pana Katarzyny Krępuły - 6\n--\ndoktora Pana Beaty Wikiery - 7\n--\ndoktora Pana Anny Otlewskiej - 8",
+        "doctor_selected": "Małgorzata Kiełczewska",
+        "event_ended": true,
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Specjalista, którego wybrałeś to: Doktor Małgorzata Kiełczewska" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "tak"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_doctor_count": 5,
+        "booking_cancelled": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "doctor_avail_category": "Endokrynolog",
+        "doctor_avail_list": "doktora Pana Małgorzaty Kiełczewskiej - 4\n--\ndoktora Pana Piotra Janczaka - 5\n--\ndoktora Pana Katarzyny Krępuły - 6\n--\ndoktora Pana Beaty Wikiery - 7\n--\ndoktora Pana Anny Otlewskiej - 8",
+        "doctor_selected": "Małgorzata Kiełczewska",
+        "event_ended": true,
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "czy chcesz umówić się na wizyte, zmienić jej termin, odwołać ją, czy może chcesz tylko sprawdzic na kiedy masz umówioną wizytę" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "chciałbym umówić się na wizytę"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_doctor_count": 5,
+        "booking_cancelled": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "doctor_avail_category": "Endokrynolog",
+        "doctor_avail_list": "doktora Pana Małgorzaty Kiełczewskiej - 4\n--\ndoktora Pana Piotra Janczaka - 5\n--\ndoktora Pana Katarzyny Krępuły - 6\n--\ndoktora Pana Beaty Wikiery - 7\n--\ndoktora Pana Anny Otlewskiej - 8",
+        "doctor_selected": "Małgorzata Kiełczewska",
+        "event_ended": true,
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "triggeredIntent": {
+        "name": "appointment.new"
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Oczywiście! Wybierz proszę  lekarza do którego chciałbyś się umówić. Zaczniemy od wybrania specjalizacji." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Mamy  następujących specjalistów w naszej przychodni" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Endokrynolog dziecięcy, Urolog, Endokrynolog, Endokrynolog-Ginekolog" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Chwileczkę, szukam dla ciebie lekarza tej specjalizacji" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Mamy następujących lekarzy specjalizacji Endokrynolog" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "doktora Pana Małgorzaty Kiełczewskiej - 4\n--\ndoktora Pana Piotra Janczaka - 5\n--\ndoktora Pana Katarzyny Krępuły - 6\n--\ndoktora Pana Beaty Wikiery - 7\n--\ndoktora Pana Anny Otlewskiej - 8" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Specjalista, którego wybrałeś to: Doktor Małgorzata Kiełczewska" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "małgorzata kiełczewska"
+        },
+        "languageCode": "pl"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "action_ended": true,
+        "avail_doctor_count": 5,
+        "booking_cancelled": true,
+        "called_number": "Nirmal",
+        "caller_id_voice": "9 2 8 3 1 8 1 2 2 8",
+        "counters": {
+          "next_apt": 0
+        },
+        "doc_info": {
+          "courtesy": "Pana",
+          "doctorId": "26810976141575321",
+          "dtmf_number": "2",
+          "firstname": "Aleksander",
+          "firstname_d": "Aleksandrowi",
+          "firstname_e": "Aleksandrem",
+          "firstname_f": "Aleksandra",
+          "firstname_g": "Aleksandra",
+          "firstname_n": "Aleksander",
+          "fullName": "Aleksander Biały",
+          "fullName_f": "Aleksandra Białego",
+          "lastname": "Biały",
+          "lastname_d": "Białemu",
+          "lastname_e": "Białym",
+          "lastname_f": "Białego",
+          "lastname_g": "Białego",
+          "lastname_n": "Biały",
+          "row_id": "2",
+          "specialists": [ "Urolog" ],
+          "timeframe": "Sobota od dziesiątej do piętnastej",
+          "title": "doktora",
+          "title_d": "doktorowi",
+          "title_e": "Doktorem",
+          "title_g": "doktora",
+          "title_n": "doktor"
+        },
+        "doctor_avail_category": "Endokrynolog",
+        "doctor_avail_list": "doktora Pana Małgorzaty Kiełczewskiej - 4\n--\ndoktora Pana Piotra Janczaka - 5\n--\ndoktora Pana Katarzyny Krępuły - 6\n--\ndoktora Pana Beaty Wikiery - 7\n--\ndoktora Pana Anny Otlewskiej - 8",
+        "doctor_selected": "Małgorzata Kiełczewska",
+        "event_ended": true,
+        "event_meta_last": {
+          "from_appointments": false
+        },
+        "get_avail_specialist": true,
+        "matchedUser": {
+          "address": "Test Borowska",
+          "brith_year": "1990",
+          "city": "",
+          "comments": null,
+          "contact": "9283181228",
+          "document": null,
+          "email": "nirmalk.web@gmail.com",
+          "gender": "K",
+          "name": "Nirmal ",
+          "nfz": null,
+          "nip": "",
+          "pcj_dom": "",
+          "pcj_id": "26954",
+          "pcj_kraj": "Polska",
+          "pcj_mieszkanie": "",
+          "pcj_okreslenie": "",
+          "pcj_osobaupowazniona": "",
+          "pcj_ulica": "Test Borowska",
+          "pcj_wojewodztwo": "",
+          "pesel": "6011702690",
+          "phone": "9283181228",
+          "surname": "Kumar",
+          "teryt_simc_sym": "",
+          "zip_code": "50-532"
+        },
+        "need_doctor_selection": true,
+        "next": "my-bookings",
+        "next_route": "new-booking",
+        "patient_id": "26954",
+        "pesel": "6011702690",
+        "pesel_last_5": "02690",
+        "pesel_last_5_input": "02690",
+        "pesel_last_5_verified": true,
+        "pesel_valid": true,
+        "pesel_verified": true,
+        "slot_refreshed": true,
+        "specialist_list": [ "Endokrynolog dziecięcy", "Urolog", "Endokrynolog", "Endokrynolog-Ginekolog" ],
+        "user_exists": true,
+        "valid_phone": true
+      },
+      "currentPage": {
+        "name": "Choose-Doctor",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "czy chcesz umówić się na wizyte, zmienić jej termin, odwołać ją, czy może chcesz tylko sprawdzic na kiedy masz umówioną wizytę" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1636729707,
+    "nanos": 543488000
+  }
+}

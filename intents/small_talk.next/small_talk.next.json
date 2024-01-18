@@ -1,0 +1,13 @@
+{
+  "name": "3a4ff6ae-6827-403f-b1ea-5221bad3f28f",
+  "displayName": "small_talk.next",
+  "parameters": [ {
+    "id": "use_this_caller_id",
+    "entityType": "@use_this_caller_id"
+  }, {
+    "id": "date-time",
+    "entityType": "@sys.date-time"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 25
+}

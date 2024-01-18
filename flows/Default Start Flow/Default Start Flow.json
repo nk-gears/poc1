@@ -1,0 +1,77 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hi! My name is Donate, and I'm a chatbot here at Save a Life. I can answer questions related to eligibility information such as and help you determine if you're eligible to donate blood." ]
+        },
+        "languageCode": "en"
+      } ],
+      "generators": [ {
+        "generator": "projects/endo-bot-ai/locations/global/agents/8d6e2e07-2674-461f-b2cf-a74cf7c7efeb/generators/dc2e12f5-e39f-49a1-860e-ea6c26a332fc",
+        "outputParameter": "$request.generative.welcome-message"
+      } ]
+    },
+    "name": "c52aeab8-74af-405e-b6e1-9b3bac3cc8ac"
+  }, {
+    "intent": "confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Eligibility Quiz",
+    "name": "37e2497c-7cf1-46c2-a725-2f568c7b284a"
+  }, {
+    "intent": "take.eligibility-quiz",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your donation changes lives. But not everyone can donate blood (including plasma), for a few reasons. Let's check your eligibility to donate today." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Eligibility Quiz",
+    "name": "2a4ae2eb-f42b-44e5-9d00-789656a7d2fa"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "enableGenerativeFallback": true
+    },
+    "name": "69bc334c-29bf-47ef-b1ea-3e2425d9cb76"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "676e3e96-2c04-4786-80de-56a0772a598a"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_STANDARD",
+    "classificationThreshold": 0.30000001
+  },
+  "knowledgeConnectorSettings": {
+    "enabled": true,
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.knowledge.answers[0]" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/871819543762/locations/global/collections/default_collection/dataStores/australian-red-cross-lifeb_1693991640646"
+    } ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "fallbackSettings": {
+    "selectedPrompt": "Example"
+  },
+  "languageCode": "en",
+  "knowledgeConnectorSettings": {
+    "business": "Save a Life"
+  }
+}

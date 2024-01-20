@@ -3,211 +3,75 @@
   "displayName": "Default Start Flow",
   "description": "A start flow created along with the agent",
   "transitionRoutes": [ {
-    "intent": "small_talk.goodbye",
-    "triggerFulfillment": {
-    
-    },
-    "targetPage": "Anything-Else",
-    "name": "29e8994b-01ca-4e16-8d9c-2e103b1af70c"
-  }, {
     "intent": "Default Welcome Intent",
     "triggerFulfillment": {
       "messages": [ {
         "text": {
-          "text": [ "Witam w prywatnej przychodni endokrynologicznej, na Alei Kasztanowej 3. Jestem twoją wirtualną asystentką. Mam na imię Alicja. Pomogę ci zarezerwować wizytę, przenieść termin wizyty, odwołać wizytę lub sprawdzić na kiedy masz zaplanowane wizyty w naszej przychodni. Powiedz proszę, którą z tych rzeczy chciałbyś zrobić? Na przykład: \"chciałbym umówić wizytę\", \"chcę odwołać wizytę\", \"chcę zmienić termin mojej wizyty\". Przygotuj proszę swój numer pesel. Zaczynamy!" ]
-        },
-        "languageCode": "pl"
-      }, {
-        "text": {
-          "text": [ "  Hello, Welcome to a private endocrinology clinic, I am your virtual assistant.\n" ]
-        },
-        "languageCode": "en"
-      }, {
-        "text": {
-          "text": [ "  How can i assist you today ?\n" ]
-        },
-        "languageCode": "en"
-      }, {
-        "text": {
-          "text": [ "  You can ask about your appointment, book a new appointment,  re-schedule your appointment or cancel appointment" ]
+          "text": [ "Hi! My name is Donate, and I'm a chatbot here at Save a Life. I can answer questions related to eligibility information such as and help you determine if you're eligible to donate blood." ]
         },
         "languageCode": "en"
       } ],
-      "webhook": "Gabinet Webhook",
-      "tag": "check-user-type",
-      "setParameterActions": [ {
-        "parameter": "called_number",
-        "value": "Nirmal"
-      }, {
-        "parameter": "initialized",
-        "value": null
-      } ],
-      "advancedSettings": {
-        "playbackInterruptionSettings": {
-          "allowPlaybackInterruption": true
-        }
-      }
+      "generators": [ {
+        "generator": "projects/endo-bot-ai/locations/global/agents/8d6e2e07-2674-461f-b2cf-a74cf7c7efeb/generators/dc2e12f5-e39f-49a1-860e-ea6c26a332fc",
+        "outputParameter": "$request.generative.welcome-message"
+      } ]
     },
-    "name": "ee1adc9d-e5c2-4fc2-b270-569186fd92d3"
+    "name": "c52aeab8-74af-405e-b6e1-9b3bac3cc8ac"
   }, {
-    "intent": "my.appointment.enquiry",
+    "intent": "confirmation.yes",
     "triggerFulfillment": {
     
     },
-    "targetPage": "My-Appointments",
-    "name": "63d5d030-ad0c-46b2-a8c0-caf17c1a026e"
+    "targetPage": "Eligibility Quiz",
+    "name": "37e2497c-7cf1-46c2-a725-2f568c7b284a"
   }, {
-    "intent": "available.slots",
+    "intent": "take.eligibility-quiz",
     "triggerFulfillment": {
-      "setParameterActions": [ {
-        "parameter": "get_avail_slots",
-        "value": true
+      "messages": [ {
+        "text": {
+          "text": [ "Your donation changes lives. But not everyone can donate blood (including plasma), for a few reasons. Let's check your eligibility to donate today." ]
+        },
+        "languageCode": "en"
       } ]
     },
-    "targetPage": "Availability-Check",
-    "name": "d1435185-70fb-4406-b68c-726bd90483a9"
-  }, {
-    "intent": "appointment.cancel",
-    "triggerFulfillment": {
-      "setParameterActions": [ {
-        "parameter": "next_route",
-        "value": "cancel"
-      }, {
-        "parameter": "action_ended",
-        "value": null
-      }, {
-        "parameter": "booking_cancelled",
-        "value": null
-      } ]
-    },
-    "targetPage": "Cancel-Appointment-Main",
-    "name": "3df97bbf-75af-466e-812e-5ed4da97e418"
-  }, {
-    "intent": "appointment.re-schedule",
-    "triggerFulfillment": {
-      "setParameterActions": [ {
-        "parameter": "next_route",
-        "value": "re-schedule"
-      } ]
-    },
-    "targetPage": "Re-Schedule-Main",
-    "name": "d0cc7989-0741-41e5-b585-2087f034c43d"
-  }, {
-    "intent": "small_talk.goodbye",
-    "triggerFulfillment": {
-    
-    },
-    "targetPage": "End Session",
-    "name": "674fc552-89bc-49ea-bbe7-cf69cba215f2"
-  }, {
-    "intent": "appointment.new",
-    "triggerFulfillment": {
-      "setParameterActions": [ {
-        "parameter": "next_route",
-        "value": "new-booking"
-      } ]
-    },
-    "targetPage": "Booking-New-Main",
-    "name": "7647b0e8-e13c-457b-adac-d75ed87f2c9b"
-  }, {
-    "intent": "user.register",
-    "triggerFulfillment": {
-    
-    },
-    "targetPage": "Reg-Init",
-    "name": "38d070c1-3ec0-4388-b226-5c92af33247f"
+    "targetPage": "Eligibility Quiz",
+    "name": "2a4ae2eb-f42b-44e5-9d00-789656a7d2fa"
   } ],
   "eventHandlers": [ {
     "event": "sys.no-match-default",
     "triggerFulfillment": {
-      "messages": [ {
-        "text": {
-          "text": [ "Przepraszam, nie zrozumiałam tego. Czy możesz to powiedzieć jeszcze raz?", "Przepraszam, nie zrozumiałam tego. Czy możesz to powtórzyć?", "Przepraszam, nie zrozumiałam tego. Czy możesz sformułować to inaczej?" ]
-        },
-        "languageCode": "pl"
-      }, {
-        "text": {
-          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
-        },
-        "languageCode": "en"
-      } ]
+      "enableGenerativeFallback": true
     },
-    "name": "1a2fc2c2-143b-4d02-896b-5140664d05f1"
+    "name": "69bc334c-29bf-47ef-b1ea-3e2425d9cb76"
   }, {
     "event": "sys.no-input-default",
     "triggerFulfillment": {
       "messages": [ {
         "text": {
-          "text": [ "Przepraszam, nie zrozumiałam tego. Czy możesz to powiedzieć jeszcze raz?", "Przepraszam, nie zrozumiałam tego. Czy możesz to powtórzyć?", "Przepraszam, nie zrozumiałam tego. Czy możesz sformułować to inaczej?", "Przepraszam, powtórz proszę?", "Powiedz to jeszcze raz proszę?", "Powiedz proszę co chcesz zrobić. Umówić wizytę, sprawdzić terminy swoich wizyt, odwołać wizytę czy ją przełożyć" ]
-        },
-        "languageCode": "pl"
-      }, {
-        "text": {
           "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
         },
         "languageCode": "en"
       } ]
     },
-    "name": "a11f7517-aae0-4ef9-b41f-bfe80f5b2366"
-  }, {
-    "event": "sys.no-match-1",
-    "triggerFulfillment": {
-      "messages": [ {
-        "text": {
-          "text": [ "czy chcesz umówić się na wizyte, zmienić jej termin, odwołać ją, czy może chcesz tylko sprawdzic na kiedy masz umówioną wizytę" ]
-        },
-        "languageCode": "pl"
-      }, {
-        "text": {
-          "text": [ "I am your assistant " ]
-        },
-        "languageCode": "en"
-      }, {
-        "text": {
-          "text": [ "You can ask about your appointment, book a new appointment,  re-schedule your appointment or cancel appointment" ]
-        },
-        "languageCode": "en"
-      } ]
-    },
-    "name": "f365789d-5a21-47ef-9d23-1b617c0cb547"
-  }, {
-    "event": "sys.no-match-2",
-    "triggerFulfillment": {
-      "messages": [ {
-        "text": {
-          "text": [ "Proszę spróbuj ponownie" ]
-        },
-        "languageCode": "pl"
-      }, {
-        "text": {
-          "text": [ "Please try again" ]
-        },
-        "languageCode": "en"
-      } ]
-    },
-    "name": "1eb7483e-019d-4fa2-b7b7-c9ea8ebc9e81"
-  }, {
-    "targetPage": "End Session",
-    "event": "sys.no-match-3",
-    "triggerFulfillment": {
-      "messages": [ {
-        "text": {
-          "text": [ "Przepraszam. Muszę przerwać połączenie. Spróbuj ponownie później." ]
-        },
-        "languageCode": "pl"
-      }, {
-        "text": {
-          "text": [ "Sorry. I need to disconnect the call now. Try again later." ]
-        },
-        "languageCode": "en"
-      } ]
-    },
-    "name": "ba99fbd9-ba24-4e92-87a1-cde85fe1e3b9"
+    "name": "676e3e96-2c04-4786-80de-56a0772a598a"
   } ],
   "nluSettings": {
     "modelType": "MODEL_TYPE_STANDARD",
-    "classificationThreshold": 0.30000001,
-    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+    "classificationThreshold": 0.30000001
   },
-  "transitionRouteGroups": [ "Appointment Intents", "Clinic Faqs" ]
+  "knowledgeConnectorSettings": {
+    "enabled": true,
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.knowledge.answers[0]" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/871819543762/locations/global/collections/default_collection/dataStores/australian-red-cross-lifeb_1693991640646"
+    } ]
+  }
 }

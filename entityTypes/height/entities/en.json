@@ -1,7 +1,0 @@
-{
-  "entities": [ {
-    "value": "@sys.number:number @unit-height",
-    "synonyms": [ "@sys.number:number @unit-height" ],
-    "languageCode": "en"
-  } ]
-}

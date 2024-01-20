@@ -1,33 +1,42 @@
 {
   "defaultLanguageCode": "en",
-  "supportedLanguageCodes": [ "pl", "en-gb" ],
-  "timeZone": "Europe/London",
+  "timeZone": "Asia/Colombo",
   "enableLogging": true,
   "projectNumber": 871819543762,
   "speechToTextSettings": {
-    "enableSpeechAdaptation": true
+  
   },
   "startFlow": "Default Start Flow",
-  "enableSpellCorrection": true,
   "advancedSettings": {
-    "enabled": true,
     "audioExportGcsDestination": {
     
     },
     "speechSettings": {
-      "endpointerSensitivity": 50,
+      "endpointerSensitivity": 90,
       "noSpeechTimeout": {
-        "seconds": 7
+        "seconds": 5
       }
     },
     "playbackInterruptionSettings": {
-      "allowPlaybackInterruption": true
+    
     },
     "loggingSettings": {
       "enableInteractionLogging": true
     }
   },
   "speakerIdSettings": {
+  
+  },
+  "textToSpeechSettings": {
+  
+  },
+  "genAppBuilderSettings": {
+    "engine": "projects/871819543762/locations/global/collections/default_collection/engines/gabinet-bot_1704979482810"
+  },
+  "duplexSettings": {
+  
+  },
+  "answerFeedbackSettings": {
   
   }
 }

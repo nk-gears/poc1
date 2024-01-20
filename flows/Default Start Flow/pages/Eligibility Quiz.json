@@ -1,0 +1,86 @@
+{
+  "name": "8f8215b6-bb08-422a-96a3-5c81924fe3c9",
+  "displayName": "Eligibility Quiz",
+  "form": {
+    "parameters": [ {
+      "displayName": "age",
+      "required": true,
+      "entityType": "@sys.number-integer",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "How old are you?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "pregnancy",
+      "required": true,
+      "entityType": "@sys.any",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Are you pregnant or recently given birth?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "iron-heart",
+      "required": true,
+      "entityType": "@sys.any",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Do you have a heart condition or/and are you low in iron?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "weight",
+      "required": true,
+      "entityType": "@sys.number-integer",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What is your correct weight?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.generative.eligibility-outcome" ]
+        },
+        "languageCode": "en"
+      } ],
+      "generators": [ {
+        "generator": "projects/endo-bot-ai/locations/global/agents/8d6e2e07-2674-461f-b2cf-a74cf7c7efeb/generators/f1538406-9f29-475c-abab-230942487070",
+        "inputParameters": [ {
+          "key": "age",
+          "value": "$session.params.age"
+        }, {
+          "key": "weight",
+          "value": "$session.params.weight"
+        } ],
+        "outputParameter": "$request.generative.eligibility-outcome"
+      } ]
+    },
+    "name": "14d0aa78-ad46-49e4-9093-f55b770a460f"
+  } ]
+}

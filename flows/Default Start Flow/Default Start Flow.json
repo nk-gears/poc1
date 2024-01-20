@@ -7,7 +7,7 @@
     "triggerFulfillment": {
       "messages": [ {
         "text": {
-          "text": [ "Hi! My name is Donate, and I'm a chatbot here at Save a Life. I can answer questions related to eligibility information such as and help you determine if you're eligible to donate blood." ]
+          "text": [ "Hi! My name is Donater, and I'm a chatbot here at Save a Life. I can answer questions related to eligibility information such as and help you determine if you're eligible to donate blood." ]
         },
         "languageCode": "en"
       } ],

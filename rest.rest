@@ -1,0 +1,5 @@
+POST https://dialogflow.clients6.google.com/v3alpha1/projects/endo-bot-ai/locations/global/agents/8d6e2e07-2674-461f-b2cf-a74cf7c7efeb:restore?alt=json&key=AIzaSyD1dO8oRagJkmtkSJ9oLI289jIT8M4Zk5s
+Content-Type: application/json
+Authorization: SAPISIDHASH 1705741420_7ccb8857da2d62ca267a9499d6136484d1a2d16c
+
+{"gitSource":{"trackingBranch":"genai-poc"}}

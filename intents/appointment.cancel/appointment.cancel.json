@@ -3,5 +3,5 @@
   "displayName": "appointment.cancel",
   "priority": 500000,
   "description": "Cancel an Appointment",
-  "numTrainingPhrases": 14
+  "numTrainingPhrases": 13
 }

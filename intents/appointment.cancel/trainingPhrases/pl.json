@@ -1,29 +1,25 @@
 {
   "trainingPhrases": [ {
     "parts": [ {
-      "text": "proszę odwołać moją wizytę",
-      "auto": true
+      "text": "proszę odwołać moją wizytę"
     } ],
     "repeatCount": 1,
     "languageCode": "pl"
   }, {
     "parts": [ {
-      "text": "niestety muszę odwołac wizytę",
-      "auto": true
+      "text": "niestety muszę odwołac wizytę"
     } ],
     "repeatCount": 1,
     "languageCode": "pl"
   }, {
     "parts": [ {
-      "text": "chcę odwolać moją wizytę",
-      "auto": true
+      "text": "chcę odwolać moją wizytę"
     } ],
     "repeatCount": 1,
     "languageCode": "pl"
   }, {
     "parts": [ {
-      "text": "chciałbym odwołać wizytę",
-      "auto": true
+      "text": "chciałbym odwołać wizytę"
     } ],
     "repeatCount": 1,
     "languageCode": "pl"

@@ -33,16 +33,6 @@
     "languageCode": "en"
   }, {
     "parts": [ {
-      "text": "i want to cancel my appointment with "
-    }, {
-      "text": "Samuel",
-      "parameterId": "person",
-      "auto": true
-    } ],
-    "repeatCount": 1,
-    "languageCode": "en"
-  }, {
-    "parts": [ {
       "text": "i want to cancel my appointment"
     } ],
     "repeatCount": 1,
